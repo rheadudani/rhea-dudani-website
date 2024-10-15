@@ -149,6 +149,12 @@ nav {
     border-radius: 50px; /* Optional: rounded corners */
 }
 
+.blue-highlight {
+    background-color:  #0CB8CE; /* Highlight color */
+    padding: 0 7px; /* Horizontal padding for spacing */
+    border-radius: 50px; /* Optional: rounded corners */
+}
+
 #work {
     background: linear-gradient(to bottom, rgba(12, 184, 206, 1), rgba(12, 184, 206, 0)); /* Gradient from nav color to transparent */
 }
@@ -159,35 +165,42 @@ nav {
     color: #F6E6F9;
 }
 
+.video-container {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 10px solid #F6E6F9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16 / 9;
+}
+
+
+
+.reel {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Use the container height */
+    border-radius: 12px; /* Match the border radius */
+}
+
+
 
 #documentary-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
     color:#222222; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
-    text-align: left;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 50px;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
-}
-
-#doc-awards {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 20px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
     text-align: left;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 50px;
     text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
-
 }
+
+
 
 #creative-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
@@ -196,7 +209,7 @@ nav {
     margin-bottom: 1px; /* Space between intro and typing text */
     z-index: 1;
     text-align: left;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 50px;
@@ -298,7 +311,8 @@ nav {
     display: flex; /* Use flexbox for horizontal alignment */
     justify-content: center; /* Center the images */
     flex-wrap: wrap; /* Allow wrapping if necessary */
-    padding-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .accolade-image {
@@ -315,7 +329,12 @@ nav {
 }
 
 #about {
-    background: linear-gradient(to bottom, #F6E6F9,#0CB8CE) ; /* Gradient from nav color to transparent */
+    background: F6E6F9;
+}
+
+#fade { 
+    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+
 }
 
 #about h2 {
@@ -368,19 +387,46 @@ nav {
     font-size: 55px;
  }
 
- #podcast-intro, #music-intro {
+
+ #music-intro {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+ }
+
+#strawberries-song {
+    padding-bottom: 150px;
+}
+.pink-border {
+    border: 5px solid #F6E6F9; /* Use your pink color */
+    border-radius: 12px; /* Match the existing border-radius */
+    padding: 10px; /* Optional: Add some padding if desired */
+}
+
+ #podcast-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
     color:#222222; /* Set the color of the intro text */
     margin-bottom: 1px; /* Space between intro and typing text */
     z-index: 1;
     text-align: left;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
  }
+
+.blue-border {
+    border: 5px solid #0CB8CE; /* Use your pink color */
+    border-radius: 12px; /* Match the existing border-radius */
+    padding: 10px; /* Optional: Add some padding if desired */
+}
 
 
 
@@ -402,8 +448,9 @@ section {
 }
 
 footer {
-    background: #333;
+    background: #0CB8CE;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    font-family: 'Poppins';
 }
