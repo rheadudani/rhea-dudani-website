@@ -95,6 +95,7 @@ nav {
     text-align: right; /* Right-align text */
     padding: 10px; /* Add padding around intro text */
     box-sizing: border-box; /* Include padding in width calculation */
+    padding-right: 40px;
 }
 
 #intro-line {

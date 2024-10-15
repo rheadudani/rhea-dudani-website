@@ -28,7 +28,7 @@
 	<section id="home">
     <img src="images/rhea-camera.JPG" alt="Rhea with a camera" class="home-image">
     <div class="intro-container">
-        <div id="intro-line">Hi, I’m Rhea Dudani, a Brooklyn-based <span class="highlight">filmmaker.</span> I love bringing people together through storytelling, focusing on the rich, personal experiences of <span class="highlight">marginalized communities.</span> I create</div>
+        <div id="intro-line">Hi, I’m Rhea Dudani, a Brooklyn-based <span class="highlight">filmmaker.</span> I bring people together through storytelling, focusing on the rich, personal experiences of <span class="highlight">marginalized communities.</span> I create</div>
         <div id="typing-text">
             <span id="dynamic-text"></span>
         </div>
@@ -44,7 +44,7 @@
         </div>
    		
    		
-	  	<div id="documentary-intro">I've worked on a diverse range of documentaries, from a captivating five-part docuseries to an <span class="highlight"> Oscar-nominated </span> short and beyond...
+	  	<div id="documentary-intro">I've worked on a diverse range of documentaries, from a captivating <span class="highlight">five-part docuseries</span> to an <span class="highlight">Oscar-nominated</span> short and beyond...
 	    </div>
 
 		<div class="work-grid">
@@ -189,11 +189,11 @@
     	<h2 id="abouthead">ABOUT</h2>
     	<div class="about-container">
        		<div class="about-text">
-	            <p>Rhea Dudani is a filmmaker, driven by her passion for feminism and politics, specializing in crafting narratives that amplify South Asian and female voices to shatter barriers.</p>
-	            <p>Her filmmaking journey began uniquely, with her debut in 2008—a whimsical production shot on her mother's camcorder, starring her sister and an eclectic cast of household plants.</p>
-	            <p>With a B.F.A. in Film and Television from the Tisch School of the Arts, Rhea now works as a freelance producer, director, and writer.</p>
-	            <p>Previously, Rhea thrived as a freelance Associate Producer at STUDIO ONE, contributing to a forthcoming feature documentary set for release in late 2024. Her career boasts diverse experiences, including pivotal roles as an Associate Producer at AKPD Message & Media, where she shaped poignant political ads for the 2022 Midterm Election.</p>
-	            <p>Embracing film as a catalyst for societal transformation, Rhea continues to pioneer unconventional storytelling, igniting conversations and challenging perceptions with each cinematic endeavor.</p>
+	            <p>I’m Rhea Dudani, a filmmaker driven by my deep passion for feminism and politics. My heart lies in telling stories that uplift South Asian and female voices, striving to shatter barriers and inspire change.</p>
+	            <p>My filmmaking journey began back in 2008, when I picked up my mother's camcorder for my directorial debut: a film starring my younger sister and an eclectic cast of household plants, completely narrated by yours truly. Unfortunately, this filmmaking endeavor taped over a slew of important family memories. It's okay, though... our family has gotten over it. It was a whimsical beginning that ignited my passion for storytelling.</p>
+	            <p>After years of pursuing visual storytelling through photo and video,  I headed to the Tisch School of the Arts, where I earned my B.F.A. in Film and Television. </p>
+	            <p>Once I graduated, I jumped into the world of production, working as an Associate Producer at Big Mouth Productions, and Hazel Pictures, where I worked on five separate feature documenatries. Then, I continued as an Associate Producer at AKPD Message & Media. There, I crafted political ads for the 2022 Midterm Election, and the 2024 general election, blending my love for storytelling with a splash of activism.</p>
+	            <p>Now, I’m embracing the freelance life as a producer, director, and writer. I’m on a mission to amplify South Asian and female voices, using film as a playful yet powerful way to spark conversations and challenge perceptions. Join me on this exciting journey—I can’t wait to see what stories we’ll tell next!</p>
 	        </div>
 	        <div class="about-image">
 	            <img src="images/rhea-hs.jpg" alt="Rhea's head shot">
@@ -276,20 +276,6 @@
         type(); // Start the typing effect
     };
 
-    function expandImage(workItem) {
-    const imgSrc = workItem.querySelector('.film-image').src;
-    const info = workItem.querySelector('.film-info').innerHTML;
-
-    const expandedDiv = document.getElementById('expanded');
-    document.getElementById('expanded-img').src = imgSrc;
-    document.getElementById('overlay-info').innerHTML = info;
-
-    expandedDiv.style.display = 'flex'; // Show the expanded view
-
-    expandedDiv.onclick = function() {
-        expandedDiv.style.display = 'none'; // Close on click
-    };
-}
 </script>
 
 </body>
