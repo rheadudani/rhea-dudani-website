@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Dela Gothic One'; /* Name for the font */
+    src: url('fonts/DelaGothicOne-Regular.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hello'; /* Name for the font */
+    src: url('fonts/Hello.otf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
+    font-size: 55px;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fallback font */
+    background-color: #F6E6F9; /* Set background color */
+}
+
+header {
+    background: transparent; /* Clear background */
+    color: black; /* Change text color to black */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distributes items evenly */
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    flex: auto;
+    justify-content: flex-start; /* Align items to the start */
+    margin-right: 10px; /* Add some margin if needed */
+    padding: 20px;
+}
+.nav-left a,
+.nav-right a {
+    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
+    color: #0CB8CE; /* Set link color to #0CB8CE */
+    text-decoration: none;
+    padding-top: 30px; /* Adjust padding as needed */
+    transition: color 0.3s; /* Smooth transition for hover effects */
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold for better visibility */
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #222222; /* Change text color on hover */
+}
+
+
+.nav-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-center h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the same font */
+    font-size: 55px; /* Increased size */
+    font-weight: bold; /* Bold for emphasis */
+    color: #0CB8CE; /* Set link color to #0CB8CE */
+}
+
+
+#home {
+    position: relative; /* Allow absolute positioning of children */
+    overflow: hidden; /* Hide overflow for a cleaner look */
+    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+    justify-content: space-between; /* Distribute space between children */
+
+}
+
+.intro-container {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    right: 0; /* Align to the right */
+    width: 65%; /* Adjust width to span from center to right */
+    text-align: right; /* Right-align text */
+    padding: 10px; /* Add padding around intro text */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#intro-line {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 35px; /* Adjust font size as needed */
+    color: #222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-shadow: 3px 3px 6px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+}
+
+
+.typing-container {
+    position: absolute; /* Keep it positioned absolutely */
+    top: calc(30% + 60px); /* Adjust to be directly below the intro line */
+    right: 0; /* Align to the right */
+    width: 56%; /* Match the width of intro-line */
+    text-align: right; /* Right-align text */
+    padding: 10px; /* Match padding with intro-line */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#typing-text {
+    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
+    font-size: 55px; /* Match the size or adjust as needed */
+    color: #F6E6F9; /* Set the text color */
+    z-index: 0; /* Keep it behind the intro text */
+    text-align: right; /* Ensure right alignment */
+}
+
+.image-container {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.home-image {
+    width: 450px; /* Fixed width for circular crop */
+    height: 450px; /* Fixed height to match width */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    display: block; /* Center image block */
+    padding-left: 10px; /* Slightly move image content to the right */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.home-image:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.highlight {
+    background-color: #F6E6F9; /* Highlight color */
+    padding: 0 7px; /* Horizontal padding for spacing */
+    border-radius: 50px; /* Optional: rounded corners */
+}
+
+#work {
+    background: linear-gradient(to bottom, rgba(12, 184, 206, 1), rgba(12, 184, 206, 0)); /* Gradient from nav color to transparent */
+}
+
+#work h2 {
+    font-family: Dela Gothic One;
+    font-size: 55px;
+    color: #F6E6F9;
+}
+
+
+#documentary-intro {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+}
+
+#doc-awards {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 20px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+
+}
+
+#creative-intro {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+}
+
+
+#political-intro {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+}
+
+
+.our-work {
+    text-align: center; /* Center align work section */
+    padding: 50px 0; /* Spacing around section */
+}
+
+.work-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.work-item {
+    position: relative; /* Position for title overlay */
+    margin: 10px; /* Margin between items */
+}
+
+.film-image {
+    width: 420px; /* Fixed width for film images */
+    height: 280px; /* Fixed height to maintain aspect ratio */
+    border-radius: 15px; /* Rounded edges */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.film-image:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.film-title {
+    position: absolute; /* Position title over image */
+    bottom: 20px; /* Position at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    color: #F6E6F9; /* Title text color */
+    font-size: 20px; /* Title font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+    font-family: Poppins;
+}
+
+.work-item:hover .film-title {
+    opacity: 1; /* Show title on hover */
+}
+
+.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expanded img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 15px; /* Rounded edges */
+}
+
+.overlay-info {
+    color: #F6E6F9;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Ensure the font is Poppins */
+    margin: 5px 0; /* Adjust margin to reduce space between paragraphs */
+}
+
+
+.accolades-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    padding-top: 20px;
+}
+
+.accolade-image {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height to ensure uniformity */
+    margin: 20px; /* Space between images */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for scaling and filter */
+    object-fit: contain; /* Maintain aspect ratio while fitting in the specified size */
+    filter: grayscale(100%) brightness(0); /* Make images black */
+}
+
+.accolade-image:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+#about {
+    background: linear-gradient(to bottom, #F6E6F9,#0CB8CE) ; /* Gradient from nav color to transparent */
+}
+
+#about h2 {
+    font-family: Dela Gothic One;
+    color:#0CB8CE; /* Text color for visibility */
+    font-size: 55px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+}
+
+.about-text {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(to bottom,rgba(246, 170, 249, 1) , rgba(12, 150, 170, 1)); /* Gradient from nav color to transparent */
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+    text-align: left; /* Right justify text */
+    flex: 1; /* Take up available space */
+    padding-right: 20px; /* Space between text and image */
+    z-index: 1;
+}
+
+.about-text {
+    font-size: 20px;
+}
+
+.about-image {
+    flex: 0 0 auto; /* Keep the image container's size as is */
+    padding-top: 25px;
+    padding-right: 40px;
+    padding-left: 40px;
+    z-index: 0;
+}
+
+.about-image img {
+    width: 450px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Adjust the rounding of edges */
+    max-width: 100%; 
+}
+
+#sound { 
+    background: linear-gradient(to bottom, #0CB8CE, #F6E6F9); /* Gradient from nav color to transparent */
+ }
+
+ #sound h2 {
+    color: #F6E6F9;
+    font-size: 55px;
+ }
+
+ #podcast-intro, #music-intro {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+ }
+
+
+
+ #yoga {
+    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+ }
+
+ #yoga h2 {
+    color: #F6E6F9;
+ }
+
+ #writing {
+    background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
+
+ }
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}

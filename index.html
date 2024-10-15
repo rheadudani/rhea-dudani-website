@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+            	<a href="#work">work ♡ </a>
+                <a href="#about">about ♡ </a>
+                <a href="#sound">sound ♡ </a>
+            </div>
+            <div class="nav-center">
+                <h1>RHEA DUDANI</h1>
+            </div>
+            <div class="nav-right">
+                <a href="#yoga">yoga ♡ </a>
+                <a href="#writing">writing ♡ </a>
+                <a href="#photography">photography ♡ </a> 
+            </div>
+        </nav>	
+    </header>
+
+	<section id="home">
+    <img src="images/rhea-camera.JPG" alt="Rhea with a camera" class="home-image">
+    <div class="intro-container">
+        <div id="intro-line">Hi, I’m Rhea Dudani, a Brooklyn-based <span class="highlight">filmmaker.</span> I love bringing people together through storytelling, focusing on the rich, personal experiences of <span class="highlight">marginalized communities.</span> I create</div>
+        <div id="typing-text">
+            <span id="dynamic-text"></span>
+        </div>
+    </div>
+</section>
+
+<!-- this entire section is my work section -->
+   <section id="work" class="our-work">
+   		<h2>SELECTED FILM WORK</h2>
+
+   		<div class="accolades-container">
+            <img src="accolades/NFFTY.png" alt="Accolade 1" class="accolade-image">
+            <img src="accolades/HBO_logo.svg" alt="Accolade 2" class="accolade-image">
+            <img src="accolades/IndieLens.png" alt="Accolade 3" class="accolade-image">
+            <img src="accolades/Sundance.png" alt="Accolade 4" class="accolade-image">
+            <img src="accolades/Netflix.png" alt="Accolade 5" class="accolade-image">
+            <img src="accolades/ITVS.png" alt="Accolade 6" class="accolade-image">
+            <img src="accolades/docnyc.png" alt="Accolade 6" class="accolade-image">
+        </div>
+   		
+	  	<div id="documentary-intro">I've worked on a diverse range of documentaries, from a captivating five-part docuseries to an <span class="highlight"> Oscar-nominated </span> short and beyond...
+	    </div>
+
+		<div class="work-grid">
+		    <div class="work-item" onclick="expandImage(this)">
+		        <a href="javascript:void(0);" class="image-container">
+		            <img src="film images/The Easy Kind.jpeg" alt="The Easy Kind" class="film-image">
+		            <div class="film-title">The Easy Kind (2024)</div>
+		        </a>
+		        <div class="film-info" style="display: none;"> 
+		            <p>Feature Documentary</p>
+		            <p>Associate Producer</p> 
+		            <p>Year: 2024</p>
+		            <p>
+		                <a href="https://variety.com/2024/music/news/elizabeth-cook-easy-kind-film-telluride-country-singer-1236135019/" target="_blank" class="film-link">Variety Article About the Film</a>
+		            </p>
+		        </div>
+		    </div>
+
+		    <div class="work-item">
+	            <a href="https://www.youtube.com/watch?v=0SYWxQ62AUM" class="image-container" target="_blank">
+	                <img src="film images/TheMME.jpg" alt="Martha Mitchell" class="film-image">
+	                <div class="film-title">Martha Mitchell Effect (2022)</div>
+	            </a>
+        	</div>
+
+        	 <div class="work-item">
+            <a href="https://vimeo.com/785594488" class="image-container" target="_blank">
+                <img src="film images/En Sus Manos.jpg" alt="En Sus Manos" class="film-image">
+                <div class="film-title">En Sus Manos (2022)</div>
+            </a>
+       		</div>
+
+        	<div class="work-item">
+	            <a href="https://www.youtube.com/watch?v=0SYWxQ62AUM" class="image-container" target="_blank">
+	                <img src="film images/Storm Lake.jpg" alt="Storm Lake" class="film-image">
+	                <div class="film-title">Storm Lake (2021)</div>
+	            </a>
+        	</div>
+
+        	<div class="work-item">
+	            <a href="https://www.youtube.com/watch?v=0SYWxQ62AUM" class="image-container" target="_blank">
+	                <img src="film images/Atlanta.jpg" alt="Atlanta" class="film-image">
+	                <div class="film-title">Atlanta's Missing & Murdered (2020)</div>
+	            </a>
+        	</div>
+       	 </div>
+
+  <!--     	 <div id="doc-awards"> Here are the highlights of the festivals and accolades that have celebrated my documentary work. Each laurel represents a significant milestone in my filmmaking journey. </div> -->
+
+        <div id="creative-intro">
+        	... and I've produced narrative short films that have toured the festival circuit, crafted creative music videos, and developed impactful PSA videos with celebrities.
+        </div>
+
+<div class="work-grid">
+        <!-- after the deluge -->
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=3kvPV6e7Z6E" class="image-container" target="_blank">
+                <img src="film images/After The Deluge.jpg" alt="After The Deluge" class="film-image">
+                <div class="film-title">After the Deluge (2024)</div>
+            </a>
+        </div>
+
+    	<!-- strawberries-->
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=peV77yWlmb8" class="image-container" target="_blank">
+                <img src="film images/Strawberries.jpg" alt="Strawberries" class="film-image">
+                <div class="film-title">Strawberries (2024)</div>
+            </a>
+        </div>
+
+        <div class="work-item">
+            <a href="https://vimeo.com/750178581?share=copy" class="image-container" target="_blank">
+                <img src="film images/Bereft.jpg" alt="Bereft" class="film-image">
+                <div class="film-title">Bereft (2022)</div>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=OPKeSn0iFGw" class="image-container" target="_blank">
+                <img src="film images/Pure.jpg" alt="Bereft" class="film-image">
+                <div class="film-title">Pure (2021)</div>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=QaFnYbB2DgY" class="image-container" target="_blank">
+                <img src="film images/Intermission.jpg" alt="Bereft" class="film-image">
+                <div class="film-title">Intermission (2021)</div>
+            </a>
+        </div>
+
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=_OwUV2k6PdA" class="image-container" target="_blank">
+                <img src="film images/Something.jpg" alt="Bereft" class="film-image">
+                <div class="film-title">Something (2020)</div>
+            </a>
+        </div>
+
+
+</div>
+
+
+	  	<div id="political-intro">I’ve collaborated with the DNC and Democratic campaigns nationwide to craft impactful political ads for the 2020, 2022, and 2024 election cycles.
+	    </div>
+
+<div class="work-grid">
+    
+         <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=IzFWIuDqkCc" class="image-container" target="_blank">
+                <img src="film images/Our Team is Texas Colin Allred.jpg" alt="Our Team is Texas" class="film-image">
+                <div class="film-title">Colin Allred 2023</div>
+            </a>
+        </div>
+
+
+
+        <div class="work-item">
+            <a href="https://www.youtube.com/watch?v=Mic_-Que1dE" class="image-container" target="_blank">
+                <img src="film images/KarenBass.jpg" alt="Our Team is Texas" class="film-image">
+                <div class="film-title">Karen Bass 2023</div>
+            </a>
+        </div>
+       </div>
+    </section>
+
+
+<div id="expanded" class="expanded" style="display: none;">
+    <img id="expanded-img" src="" alt="Expanded Image">
+    <div class="overlay-info" id="overlay-info"></div>
+</div>
+
+<!-- my about section-->
+   <section id="about">
+    	<h2 id="abouthead">ABOUT</h2>
+    	<div class="about-container">
+       		<div class="about-text">
+	            <p>Rhea Dudani is a filmmaker, driven by her passion for feminism and politics, specializing in crafting narratives that amplify South Asian and female voices to shatter barriers.</p>
+	            <p>Her filmmaking journey began uniquely, with her debut in 2008—a whimsical production shot on her mother's camcorder, starring her sister and an eclectic cast of household plants.</p>
+	            <p>With a B.F.A. in Film and Television from the Tisch School of the Arts, Rhea now works as a freelance producer, director, and writer.</p>
+	            <p>Previously, Rhea thrived as a freelance Associate Producer at STUDIO ONE, contributing to a forthcoming feature documentary set for release in late 2024. Her career boasts diverse experiences, including pivotal roles as an Associate Producer at AKPD Message & Media, where she shaped poignant political ads for the 2022 Midterm Election.</p>
+	            <p>Embracing film as a catalyst for societal transformation, Rhea continues to pioneer unconventional storytelling, igniting conversations and challenging perceptions with each cinematic endeavor.</p>
+	        </div>
+	        <div class="about-image">
+	            <img src="images/rhea-hs.jpg" alt="Rhea's head shot">
+	        </div>
+   		 </div>
+	</section>
+
+
+
+
+    <section id="sound">
+        <h2>SOUND</h2>
+          <img src="images/strawberry.png" alt="Strawberry Icon" style="width: 100px; height: auto;">
+
+        <div id="podcast-intro">As the podcast host, producer, sound mixer, and editor of Signs of the Universe, I carefully curate the story for each episode and craft the accompanying soundscape, exploring themes of manifestation and mindset.</div>
+
+        <iframe 
+	    src="https://open.spotify.com/embed/show/1kWqKZjNRDrw5UMDUjphoE" 
+	    width="300" 
+	    height="380" 
+	    frameborder="0" 
+	    allowtransparency="true" 
+	    allow="encrypted-media">
+	  </iframe>
+
+	  <div id="music-intro">I write and perform my own music, blending my passion for songwriting with a deep love for storytelling and soundscapes.</div>
+
+	      <iframe 
+	      src="https://embed.music.apple.com/us/album/strawberries-single/1757915740" 
+	      width="500" 
+	      height="400" 
+	      frameborder="0" 
+	      allow="autoplay *; encrypted-media *; clipboard-write *; fullscreen *; picture-in-picture *" 
+	      allowtransparency="true">
+	    </iframe>
+
+	              <img src="images/strawberry.png" alt="Strawberry Icon" style="width: 100px; height: auto;">
+
+    </section>
+    <section id="yoga">
+        <h2>YOGA</h2>
+    </section>
+
+      <section id="writing">
+        <h2>WRITING</h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rhea Dudani</p>
+    </footer>
+
+ 
+
+<script>
+    const texts = [
+        "documentaries.",
+        "commercials.",
+        "narrative films.",
+        "scripts.",
+        "podcasts.",
+        "music.",
+        "yoga sequences."
+    ];
+    
+    let index = 0;
+    let textIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const dynamicTextElement = document.getElementById("dynamic-text");
+
+        // Update the dynamic text based on the current index and deletion state
+        dynamicTextElement.textContent = texts[index].substring(0, textIndex);
+
+        // Logic to manage the typing and deleting
+        if (!isDeleting && textIndex === texts[index].length) {
+            setTimeout(() => isDeleting = true, 2000); // Wait before starting to delete
+        } else if (isDeleting && textIndex === 0) {
+            isDeleting = false;
+            index = (index + 1) % texts.length; // Move to the next text
+        }
+
+        // Control the speed of typing and deleting
+        textIndex += isDeleting ? -1 : 1;
+        setTimeout(type, isDeleting ? 100 : 200);
+    }
+
+    window.onload = function() {
+        const typingTextElement = document.getElementById("typing-text");
+        typingTextElement.innerHTML = "<span id='dynamic-text'></span>"; // Keep only the dynamic text
+        type(); // Start the typing effect
+    };
+
+    function expandImage(workItem) {
+    const imgSrc = workItem.querySelector('.film-image').src;
+    const info = workItem.querySelector('.film-info').innerHTML;
+
+    const expandedDiv = document.getElementById('expanded');
+    document.getElementById('expanded-img').src = imgSrc;
+    document.getElementById('overlay-info').innerHTML = info;
+
+    expandedDiv.style.display = 'flex'; // Show the expanded view
+
+    expandedDiv.onclick = function() {
+        expandedDiv.style.display = 'none'; // Close on click
+    };
+}
+</script>
+</body>
+</html>
+
+
