@@ -1,0 +1,435 @@
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2)
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --main-bg-color: #F6E6F9;
+    --highlight-color: #0CB8CE;
+    --text-color: #222222;
+    --font-main: 'Poppins', sans-serif;
+    --font-title: 'Dela Gothic One', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('fonts/DelaGothicOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hello';
+    src: url('fonts/Hello.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--main-bg-color);
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: 55px;
+}
+
+header {
+    background: transparent;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    flex: auto;
+    justify-content: flex-start;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.nav-left a,
+.nav-right a {
+    font-family: var(--font-title);
+    color: var(--highlight-color);
+    text-decoration: none;
+    padding-top: 30px;
+    transition: color 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #222222;
+}
+
+.nav-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-center h1 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+#home {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--main-bg-color), var(--highlight-color));
+}
+
+.intro-container {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 65%;
+    text-align: right;
+    padding: 10px 40px 10px 10px;
+}
+
+#intro-line {
+    font-family: var(--font-main);
+    font-size: 35px;
+    color: var(--text-color);
+    margin-bottom: 1px;
+    z-index: 1;
+    text-shadow: 3px 3px 6px rgba(246, 230, 249, 0.6);
+}
+
+.typing-container {
+    position: absolute;
+    top: calc(30% + 60px);
+    right: 0;
+    width: 56%;
+    text-align: right;
+    padding: 10px;
+}
+
+#typing-text {
+    font-family: var(--font-title);
+    font-size: 55px;
+    color: #F6E6F9;
+    z-index: 0;
+}
+
+.image-container {
+    margin-right: 20px;
+}
+
+.home-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding-left: 10px;
+    transition: transform 0.3s;
+}
+
+.home-image:hover {
+    transform: scale(1.05);
+}
+
+.highlight {
+    background-color: var(--main-bg-color);
+    padding: 0 7px;
+    border-radius: 50px;
+}
+
+.blue-highlight {
+    background-color: var(--highlight-color);
+    padding: 0 7px;
+    border-radius: 50px;
+}
+
+#work {
+    background: linear-gradient(to bottom, rgba(12, 184, 206, 1), rgba(12, 184, 206, 0));
+}
+
+#work h2 {
+    font-family: var(--font-title);
+    font-size: 55px;
+    color: #F6E6F9;
+}
+
+.video-container {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 10px solid var(--main-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16 / 9;
+}
+
+.reel {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+#documentary-intro,
+#creative-intro,
+#political-intro {
+    font-family: var(--font-main);
+    font-size: 40px;
+    color: var(--text-color);
+    text-align: left;
+    padding: 50px 40px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6);
+}
+
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.work-item {
+    position: relative;
+    margin: 10px;
+}
+
+.film-image {
+    width: 400px;
+    height: 267px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.film-image:hover {
+    transform: scale(1.1);
+}
+
+.film-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F6E6F9;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: var(--font-main);
+}
+
+.work-item:hover .film-title {
+    opacity: 1;
+}
+
+.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expanded img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 15px;
+}
+
+.overlay-info {
+    color: #F6E6F9;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-family: var(--font-main);
+    margin: 5px 0;
+}
+
+.accolades-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+}
+
+.accolade-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    transition: transform 0.3s, filter 0.3s;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0);
+}
+
+.accolade-image:hover {
+    transform: scale(1.2);
+}
+
+#about {
+    background: linear-gradient(to bottom, var(--main-bg-color), var(--highlight-color));
+}
+
+.credits-list {
+    font-family: var(--font-main);
+    font-size: 40px;
+    color: var(--text-color);
+    text-align: center;
+    padding: 200px 40px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6);
+}
+
+#about h2 {
+    font-family: var(--font-title);
+    color: var(--highlight-color);
+    font-size: 55px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-text {
+    font-family: var(--font-main);
+    background: linear-gradient(to bottom, var(--highlight-color), #D84797);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text {
+    font-size: 18px;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    padding: 25px 40px;
+}
+
+.about-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 50px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.about-image:hover {
+    transform: scale(1.07);
+    opacity: 0.9;
+}
+
+#sound {
+    background: linear-gradient(to bottom, var(--highlight-color), var(--main-bg-color));
+}
+
+#sound h2 {
+    font-family: var(--font-title);
+    color: #F6E6F9;
+    font-size: 55px;
+    text-align: center;
+}
+
+.sound-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sound-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sound-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+#contact {
+    background: linear-gradient(to bottom, var(--main-bg-color), var(--highlight-color));
+    padding: 40px;
+}
+
+#contact h2 {
+    font-family: var(--font-title);
+    font-size: 55px;
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+.contact-text {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    background: var(--highlight-color);
+    color: #F6E6F9;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.footer a {
+    color: #F6E6F9;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 40px;
+    }
+    .nav-left a,
+    .nav-right a {
+        font-size: 16px;
+    }
+    .about-text {
+        font-size: 16px;
+    }
+    .film-image {
+        width: 100%;
+        height: auto;
+    }
+    .about-image img {
+        width: 100%;
+    }
+}
+
+}
