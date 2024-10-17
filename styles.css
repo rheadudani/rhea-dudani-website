@@ -16,21 +16,21 @@
     font-style: normal;
 }
 
-h2 {
-    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
-    font-size: 55px;
-}
-
 body {
     font-family: Arial, sans-serif; /* Fallback font */
     background-color: #F6E6F9; /* Set background color */
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
+    font-size: 55px;
 }
 
 header {
     background: transparent; /* Clear background */
     color: black; /* Change text color to black */
 }
-
 
 nav {
     display: flex;
@@ -233,15 +233,13 @@ nav {
 }
 
 
-.our-work {
-    text-align: center; /* Center align work section */
-    padding: 50px 0; /* Spacing around section */
-}
 
 .work-grid {
     display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items */
     flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
 }
 
 .work-item {
@@ -250,8 +248,8 @@ nav {
 }
 
 .film-image {
-    width: 420px; /* Fixed width for film images */
-    height: 280px; /* Fixed height to maintain aspect ratio */
+    width: 400px; /* New width */
+    height: 267px; /* Adjusted height */
     border-radius: 15px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.3s; /* Smooth transition for hover effect */
@@ -330,11 +328,21 @@ nav {
 }
 
 #about {
-    background: F6E6F9;
+    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE);
 }
 
-#fade { 
-    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+.credits-list {
+
+    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
+    font-size: 40px; /* Adjust font size as needed */
+    color:#222222; /* Set the color of the intro text */
+    margin-bottom: 1px; /* Space between intro and typing text */
+    z-index: 1;
+    text-align: center;
+    padding-top: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
 
 }
 
@@ -351,7 +359,7 @@ nav {
 
 .about-text {
     font-family: 'Poppins', sans-serif; 
-    background: linear-gradient(to bottom,rgba(246, 170, 249, 1) , rgba(12, 150, 170, 1)); /* Gradient from nav color to transparent */
+    background: linear-gradient(to bottom, #0CB8CE , #D84797); /* Gradient from nav color to transparent */
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
     text-align: left; /* Right justify text */
@@ -361,7 +369,7 @@ nav {
 }
 
 .about-text {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .about-image {
@@ -375,8 +383,14 @@ nav {
 .about-image img {
     width: 450px; /* Set a specific width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 15px; /* Adjust the rounding of edges */
-    max-width: 100%; 
+    border-radius: 50px; /* Adjust the rounding of edges */
+    max-height: 500px;
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.about-image:hover {
+    transform: scale(1.07); /* Scale up on hover */
+    opacity: 0.9;
 }
 
 #sound { 

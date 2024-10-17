@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('../fonts/DelaGothicOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hello';
+    src: url('../fonts/Hello.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE);
+}
+
+.homepage {
+    text-align: left;
+    color: #222222;
+    font-size: 25px;
+    font-family: 'Dela Gothic One';
+}
+
+.head-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    text-align: center;
+    color: #0CB8CE;
+    font-size: 55px;
+    font-family: 'Dela Gothic One';
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    padding: 8px;
+    font-size: 20px;
+    text-align: left;
+    color: #222222;
+    vertical-align: bottom;
+}
+
+td {
+    padding: 8px;
+    font-size: 13px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 2px solid #222222; /* Set border color to #222222 */
+    border-bottom: 2px solid #222222; /* Set border color to #222222 */
+    color: #222222; /* Set text color */
+}
+
+th {
+    background-color: transparent; /* Make header row background transparent */
+    border-top: none; /* Remove the top border of the header row */
+}
+
+td:first-child,
+td:last-child {
+    width: 200px; /* Increase the width of the first and last columns */
+}
+
+td:nth-child(4) {
+    text-transform: capitalize; /* Title case for Type column */
+}
+
+tr {
+    height: 75px;
+}
+
+td:first-child {
+    border-top: none; 
+    border-bottom: none; 
+}
