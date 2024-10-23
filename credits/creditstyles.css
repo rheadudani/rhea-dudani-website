@@ -27,17 +27,45 @@ body {
     color: #222222;
     font-size: 25px;
     font-family: 'Dela Gothic One';
+    position: absolute; /* Position the h1 absolutely */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the element's width */
+    z-index: 0; /* Behind the link */
+    margin: 0; /* Remove default margin */
 }
 
 .head-container{
     display: flex;
     flex-wrap: wrap;
 }
+
+
+nav {
+    position: relative; /* Set relative positioning for the nav */
+    height: 60px; /* Adjust as needed */
+}
+
+.nav-link {
+    position: absolute; /* Position the link absolutely */
+    left: 20px; /* Distance from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for the element's height */
+    z-index: 1; /* Ensures it's above other content if needed */
+}
+
+.homepage {
+
+}
+
 h1 {
     text-align: center;
     color: #0CB8CE;
     font-size: 55px;
     font-family: 'Dela Gothic One';
+    justify-content: center;
+    margin: 0;
+    z-index: 1;
+    padding-top: 1px;
 
 }
 
