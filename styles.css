@@ -453,6 +453,47 @@ nav {
     background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
 
  }
+
+.photo {
+    padding: 20px;
+    text-align: center;
+}
+
+.photo h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+/* Specific adjustments for aspect ratios */
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(8) {
+    grid-row: span 2; /* Make these items take up more vertical space */
+}
+
+/* Optional: Add hover effect */
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
 section {
     padding: 50px;
     text-align: center;

@@ -115,3 +115,16 @@ td:first-child {
     border-top: none; 
     border-bottom: none; 
 }
+
+tr {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+tr:hover {
+    background-color: rgba(12, 184, 206, 0.2); /* Light hover effect */
+}
+
+/* Optional: Make sure text color contrasts well on hover */
+tr:hover td {
+    color: #222222; /* Keep text color consistent on hover */
+}
