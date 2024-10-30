@@ -154,11 +154,17 @@ nav {
     border-radius: 50px; /* Optional: rounded corners */
 }
 
+.contact {
+    text-decoration: none;
+    color: #F6E6F9;
+    font-weight: bold;
+}
+
 #work {
     background: linear-gradient(to bottom, rgba(12, 184, 206, 1), rgba(12, 184, 206, 0)); /* Gradient from nav color to transparent */
 }
 
-#work h2 {
+#work h1 {
     font-family: Dela Gothic One;
     font-size: 55px;
     color: #F6E6F9;
@@ -191,7 +197,7 @@ nav {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
     color:#222222; /* Set the color of the intro text */
-    padding-top: 50px;
+    padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
@@ -365,7 +371,7 @@ nav {
 }
 
 .about-text {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .about-image {
@@ -390,7 +396,7 @@ nav {
 }
 
 #sound { 
-    background: linear-gradient(to bottom, #0CB8CE, #F6E6F9); /* Gradient from nav color to transparent */
+    background: black;
  }
 
  #sound h2 {
@@ -399,39 +405,102 @@ nav {
  }
 
 
- #music-intro {
+#music-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
+    color: #0CB8CE; /* Set the color of the intro text */
     text-align: left;
-    padding-left: 40px;
+    padding-top: 140px;
+    padding-left: 100px;
     padding-right: 40px;
     padding-bottom: 100px;
     text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
- }
+    z-index: 1;
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 50%; /* Take up half of the screen */
+    height: auto; /* Allow height to adjust based on content */
+}
 
 #strawberries-song {
-    padding-bottom: 150px;
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align it to the top */
+    padding-top: 500px;
+    left: 0; /* Align to the left */
+    width: 60%; /* Full width */
+    z-index: 1; /* Ensure it’s below the music intro */
+    padding-left: 35px;
+    padding-right: 40px;
+    padding-bottom: 100px;
 }
+
+.iphone-music {
+    position: relative; /* Allows positioning of the overlay */
+    display: inline-block; /* Ensures the image is treated as a block for overlay */
+}
+
+.iphone-music img {
+    transition: opacity 0.3s; /* Smooth transition for the image */
+    display: block; /* Ensures the image fills the container */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 105, 180, 0.5); /* Pink overlay */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Smooth transition for the overlay */
+}
+
+.iphone-music:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
 .pink-border {
     border: 5px solid #F6E6F9; /* Use your pink color */
     border-radius: 12px; /* Match the existing border-radius */
     padding: 10px; /* Optional: Add some padding if desired */
+    position: relative; /* Ensures it stacks properly */
 }
 
  #podcast-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
+    color: #0CB8CE; /* Set the color of the intro text */
     margin-bottom: 1px; /* Space between intro and typing text */
     z-index: 1;
-    text-align: left;
-    padding-top: 20px;
+    text-align: right;
+     position: absolute; /* Position it absolutely */
+    width: 59%;
+    right: 0;
+    padding-top: 120px;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 100px;
     padding-bottom: 40px;
     text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
  }
+
+ .signs-image {
+    padding-top: 100px;
+    position: absolute;
+    left: 0;
+    padding-left: 500px;
+
+ }
+
+.signs-image img {
+    padding: 0; /* Remove padding to prevent distortion */
+    border-radius: 50%; /* Make the image circular */
+    position: absolute;
+    left: 0;
+    width: 280px; /* Fixed width */
+    height: 280px; /* Set height equal to width for a perfect circle */
+    object-fit: cover; /* Ensure the image covers the circular area */
+}
 
 .blue-border {
     border: 5px solid #0CB8CE; /* Use your pink color */
@@ -449,14 +518,40 @@ nav {
     color: #F6E6F9;
  }
 
+
+.yoga-content {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Poppins;
+    flex: 1;
+    max-width: 600px; /* Adjust width as needed */
+    margin-left: auto; /* Align to the right */
+}
+
+.schedule-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #F6E6F9; /* pink background */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.schedule-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
  #writing {
     background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
 
  }
 
-.photo {
-    padding: 20px;
-    text-align: center;
+#photo {
+ background: linear-gradient(to bottom, #F6E6F9, #222222);
 }
 
 .photo h2 {

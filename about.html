@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/strawb.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobilestyles.css">
+    <title>RHEA DUDANI</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="work.html">work ❤ </a>
+                <a href="index.html">rhea ❤ </a>
+                <a href="sound.html">sound ❤ </a>
+            </div>
+            <div class="nav-center">
+                <h1>ABOUT</h1>
+            </div>
+            <div class="nav-right">
+                <a href="yoga.html">yoga ❤ </a>
+                <a href="writing.html">writing ❤ </a>
+                <a href="photo.html">photo ❤ </a> 
+            </div>
+        </nav>  
+    </header>
+
+<!-- my about section-->
+   <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <p>I’m Rhea Dudani, a filmmaker driven by my deep passion for feminism and politics. My heart lies in telling stories that uplift South Asian and female voices, striving to shatter barriers and inspire change.</p>
+                <p>My filmmaking journey began back in 2008, when I picked up my mother's camcorder for my directorial debut: a film starring my younger sister and an eclectic cast of household plants, completely narrated by yours truly. Unfortunately, this filmmaking endeavor taped over a slew of important family memories. It's okay, though... our family has gotten over it. It was a whimsical beginning that ignited my passion for storytelling.</p>
+                <p>After years of pursuing visual storytelling through photo and video,  I headed to the Tisch School of the Arts, where I earned my B.F.A. in Film and Television. </p>
+                <p>Once I graduated, I jumped into the world of production, working as an Associate Producer at Big Mouth Productions, and Hazel Pictures, where I worked on five separate feature documenatries. Then, I continued as an Associate Producer at AKPD Message & Media. There, I crafted political ads for the 2022 Midterm Election, and the 2024 general election, blending my love for storytelling with a splash of activism.</p>
+                <p>Now, I’m embracing the freelance life as a producer, director, and writer. I’m on a mission to amplify South Asian and female voices, using film as a playful yet powerful way to spark conversations and challenge perceptions. Join me on this exciting journey—I can’t wait to see what stories we’ll tell next!</p>
+            </div>
+            <div class="about-image">
+               <img id="dynamicImage" src="images/rhea-hs.jpg" alt="Rhea's head shot" onclick="changeImage()">
+            </div>
+         </div>
+    </section>
+
+        <footer>
+        <p>&copy; I coded this entire website by myself! (I started off in STEM)</p>
+    </footer>
+
+<script>
+    
+    const images = [
+    'images/rhea-hs.jpg',
+    'images/paris.jpg',
+    'images/NYFF.jpg',
+];
+
+let currentIndex = 0;
+
+function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
+    document.getElementById('dynamicImage').src = images[currentIndex];
+
+}
+</script>
+</body>
+</html>
