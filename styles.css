@@ -11,15 +11,17 @@
 
 @font-face {
     font-family: 'Hello'; /* Name for the font */
-    src: url('fonts/Hello.otf') format('truetype'); /* Path to your font file */
+    src: url('fonts/Hello.otf') format('opentype'); /* Path to your font file */
     font-weight: normal;
     font-style: normal;
 }
+
 
 body {
     font-family: Arial, sans-serif; /* Fallback font */
     background-color: #F6E6F9; /* Set background color */
     margin: 0;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
 h2 {
@@ -40,6 +42,8 @@ nav {
     padding-right: 10px;
 }
 
+
+
 .nav-left,
 .nav-right {
     display: flex;
@@ -49,7 +53,7 @@ nav {
 .nav-left a,
 .nav-right a {
     font-family: 'Poppins', Arial, sans-serif; /* Use the custom font */
-    color: #222222; /* Set link color to #0CB8CE */
+    color: #1B4F15; /*light green*/
     text-decoration: none;
     transition: color 0.3s; /* Smooth transition for hover effects */
     font-size: 20px; /* Increased font size */
@@ -58,9 +62,25 @@ nav {
     padding-top: 30px;
 }
 
+.nav-left-work a,
+.nav-right-work a {
+    font-family: 'Poppins', Arial, sans-serif; /* Use the custom font */
+    color: white; 
+    text-decoration: none;
+    transtion: color 0.3s; /* Smooth transition for hover effects */
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold for better visibility */
+    padding: 15px;
+    padding-top: 30px;
+}
 .nav-left a:hover,
 .nav-right a:hover {
-    color: #0CB8CE; /* Change text color on hover */
+    color: #DB7BCB; /* Change text color on hover */
+}
+
+.nav-left-work a:hover,
+.nav-right-work a:hover {
+    color: #DB7BCB; /* Change text color on hover */
 }
 
 
@@ -73,15 +93,16 @@ nav {
     font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the same font */
     font-size: 55px; /* Increased size */
     font-weight: bold; /* Bold for emphasis */
-    color: #0CB8CE; /* Set link color to #0CB8CE */
+    color: #1B4F15; /* Set link color to #0CB8CE */
 }
 
 
 #home {
     position: relative; /* Allow absolute positioning of children */
     overflow: hidden; /* Hide overflow for a cleaner look */
-    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+    background: linear-gradient(to bottom, #F6E6F9, #469E6F); /* Ombre effect from current to nav color */
     justify-content: space-between; /* Distribute space between children */
+    padding: 50px;
 
 }
 
@@ -149,9 +170,7 @@ nav {
 }
 
 .blue-highlight {
-    background-color:  #0CB8CE; /* Highlight color */
-    padding: 0 7px; /* Horizontal padding for spacing */
-    border-radius: 50px; /* Optional: rounded corners */
+    color:  #DB7BCB; /* Highlight color */
 }
 
 .contact {
@@ -161,7 +180,8 @@ nav {
 }
 
 #work {
-    background: linear-gradient(to bottom, rgba(12, 184, 206, 1), rgba(12, 184, 206, 0)); /* Gradient from nav color to transparent */
+    background: linear-gradient(to bottom, black, #222222); /* Gradient from nav color to transparent */
+    margin: 0;
 }
 
 #work h1 {
@@ -184,57 +204,261 @@ nav {
 }
 
 
+.return-to-main {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    width: 100%;
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif; /* Ensure font-family is correctly set */
+    margin-bottom: 10px;
+}
+
+/* Style for the link inside return-to-main */
+.return-to-main a {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove the underline from the link */
+    color: #F6E6F9;; /* Set the text color to black (or any color you prefer) */
+    font-size: 1.5rem; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect: change text color to white when hovered */
+.return-to-main a:hover {
+    color: green; /* Text turns white when hovered */
+}
 
 .reel {
     width: 100%; /* Full width of the container */
     height: 100%; /* Use the container height */
     border-radius: 12px; /* Match the border radius */
 }
+ 
 
 
-
-#documentary-intro {
+#summary-intro {
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
+    font-size: 25px; /* Adjust font size as needed */
     color:#222222; /* Set the color of the intro text */
     padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 50px;
-    text-align: left;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 
+#SLX {
+    width: 100%;  /* Make sure each div under #SLX takes up the full width */
+    text-align: center;  /* Center the image horizontally */
+    margin-bottom: 10px;  /* Optional: space between images */
+    position: relative;
+}
 
-#creative-intro {
-   font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    text-align: left;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+#work-container {
+        margin-bottom: 50px; 
+}
+
+#SLX img {
+    width: 100vw;  /* 90% of the viewport width */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: contain;  /* Ensures the entire image is visible and not cropped */
+    display: block;  /* Removes extra space below the image */
+    justify-content: center;
+}
+
+#slx-overlay {
+    position: absolute;
+    top: 35%;  /* Vertically center the text */
+    left: 3%;  /* Horizontally center the text */
+    color: #F6E6F9;  /* Text color */
+    text-align: left;  /* Center the text */
+    max-width: 40%;  /* Prevent text from overflowing the container */
+    z-index: 10;  /* Ensure text is on top of the image */
+
+}
+
+#slx-overlay h1 {
+    font-family: 'Poppins', sans-serif;  /* Font family */
+    font-size: 24px;  /* Adjust text size */
+    font-weight: bold;  /* Make text bold */
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+#slx-overlay4 h1 {
+    font-family: 'Poppins', sans-serif;  /* Font family */
+    font-size: 24px;  /* Adjust text size */
+    font-weight: bold;  /* Make text bold */
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+#slx-overlay p {
+    font-family: 'Montserrat';
+    color: #F6E6F9;  /* Text color */
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+#slx-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding and borders in width/height */
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 
-#political-intro {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
-    text-align: left;
-    padding-top: 100px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 100px;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
+#slx-creds {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    color: #F6E6F9;  /* Text color */
+    font-size: 16px;
+
+}
+
+#accolades-WHITE {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height to ensure uniformity */
+    object-fit: contain;
+    padding-left: 0;
+    filter: invert(1) brightness(10) contrast(100);
 }
 
 
+#accolades-bereft {
+    height: 275px; /* Set a fixed height to ensure uniformity */
+    object-fit: contain;
+}
+
+#accolades {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height to ensure uniformity */
+    object-fit: contain;
+    padding-left: 0;
+}
+
+#accolades-longer{
+     height: 150px;
+     object-fit: contain;
+     position: absolute;
+     z-index: 11;
+     left: 20%;
+}
+#bold {
+    font-weight: bold;
+}
+
+#SLX {
+     position: relative;
+}
+#slx-overlay2 {
+    position: absolute;
+    top: 1200px;  /* Vertically center the text */
+    right: 3%;  /* Horizontally center the text */
+    text-align: right;  /* Center the text */
+    max-width: 32%;  /* Prevent text from overflowing the container */
+    z-index: 10;  /* Ensure text is on top of the image */
+}
+
+
+#workintro-overlay {
+    position: absolute;
+    top: 4200px;  /* Vertically center the text */
+    text-align: center;  /* Center the text */
+    max-width: 100%;  /* Prevent text from overflowing the container */
+    z-index: 12;  /* Ensure text is on top of the image */
+}
+
+#work-intro {
+    font-family: 'Poppins';
+    font-size: 35px;
+    color:#F6E6F9;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-weight: bold;
+}
+
+#slx-overlay2 p {
+    font-family: 'Montserrat';
+    color: #F6E6F9;  /* Text color */
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+
+#slx-overlay3 {
+    position: absolute;
+    top: 2050px;  /* Vertically center the text */
+    left: 3%;  /* Horizontally center the text */
+    text-align: left;  /* Center the text */
+    max-width: 40%;  /* Prevent text from overflowing the container */
+    z-index: 10;  /* Ensure text is on top of the image */
+
+}
+
+#slx-overlay4 {
+     position: absolute;
+    top: 3050px;  /* Vertically center the text */
+    left: 3%;  /* Horizontally center the text */
+    text-align: left;  /* Center the text */
+    max-width: 40%;  /* Prevent text from overflowing the container */
+    z-index: 10;  /* Ensure text is on top of the image */
+
+}
+
+#slx-overlay4 p {
+    font-family: 'Montserrat';
+    color: #F6E6F9;  /* Text color */
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    letter-spacing: 6px;
+}
+
+
+#slx-overlay3 p {
+    font-family: 'Montserrat';
+    color: #F6E6F9;  /* Text color */
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    letter-spacing: 6px;
+}
+
+#slx-overlay3 h1 {
+    font-family: 'Poppins', sans-serif;  /* Font family */
+    font-size: 24px;  /* Adjust text size */
+    font-weight: bold;  /* Make text bold */
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+#slx-overlay2 h1 {
+    font-family: 'Poppins', sans-serif;  /* Font family */
+    font-size: 24px;  /* Adjust text size */
+    font-weight: bold;  /* Make text bold */
+    color: #F6E6F9;  /* Text color */
+    letter-spacing: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+
+#greenbkgd {
+    background: #469E6F;
+    border-radius: 35px;
+    width: 50%;
+}
 
 .work-grid {
     display: flex; /* Use flexbox for layout */
@@ -250,8 +474,8 @@ nav {
 }
 
 .film-image {
-    width: 400px; /* New width */
-    height: 267px; /* Adjusted height */
+    width: 450px; /* New width */
+    height: 253px; /* Adjusted height */
     border-radius: 15px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.3s; /* Smooth transition for hover effect */
@@ -330,22 +554,26 @@ nav {
 }
 
 #about {
-    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE);
+    background: linear-gradient(to bottom, #6A8D3C, #1B4F15 );
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
+#about-section {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+}
 .credits-list {
 
     font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
     font-size: 40px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
+    color:white; /* Set the color of the intro text */
     margin-bottom: 1px; /* Space between intro and typing text */
     z-index: 1;
     text-align: center;
     padding-top: 200px;
     padding-left: 40px;
     padding-right: 40px;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
-
 }
 
 #about h2 {
@@ -361,22 +589,23 @@ nav {
 
 .about-text {
     font-family: 'Poppins', sans-serif; 
-    background: linear-gradient(to bottom, #0CB8CE , #D84797); /* Gradient from nav color to transparent */
+    background: linear-gradient(to bottom, #DB7BCB , #F6E6F9); /* Gradient from nav color to transparent */
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
     text-align: left; /* Right justify text */
     flex: 1; /* Take up available space */
     padding-right: 20px; /* Space between text and image */
+    padding-left: 20px;
     z-index: 1;
 }
 
 .about-text {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .about-image {
     flex: 0 0 auto; /* Keep the image container's size as is */
-    padding-top: 25px;
+    padding-top: 18px;
     padding-right: 40px;
     padding-left: 40px;
     z-index: 0;
@@ -547,6 +776,7 @@ nav {
 
  #writing {
     background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
+    height: 100vw;
 
  }
 
@@ -590,12 +820,19 @@ nav {
 }
 
 section {
-    padding: 50px;
     text-align: center;
 }
 
+#about-footer {
+    background: #1B4F15;
+    color: #F6E6F9;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Poppins';
+}
+
 footer {
-    background: #0CB8CE;
+    background: #469E6F;
     color: white;
     text-align: center;
     padding: 1rem 0;
