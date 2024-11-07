@@ -361,7 +361,7 @@ nav {
 }
 #slx-overlay2 {
     position: absolute;
-    top: 1200px;  /* Vertically center the text */
+    top: 900px;  /* Vertically center the text */
     right: 3%;  /* Horizontally center the text */
     text-align: right;  /* Center the text */
     max-width: 32%;  /* Prevent text from overflowing the container */
@@ -397,7 +397,7 @@ nav {
 
 #slx-overlay3 {
     position: absolute;
-    top: 1990px;  /* Vertically center the text */
+    top: 1800px;  /* Vertically center the text */
     left: 3%;  /* Horizontally center the text */
     text-align: left;  /* Center the text */
     max-width: 40%;  /* Prevent text from overflowing the container */
@@ -407,7 +407,7 @@ nav {
 
 #slx-overlay4 {
      position: absolute;
-    top: 2900px;  /* Vertically center the text */
+    top: 1800px;  /* Vertically center the text */
     left: 3%;  /* Horizontally center the text */
     text-align: left;  /* Center the text */
     max-width: 40%;  /* Prevent text from overflowing the container */
