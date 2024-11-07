@@ -361,7 +361,7 @@ nav {
 }
 #slx-overlay2 {
     position: absolute;
-    top: 1200px;  /* Vertically center the text */
+    top: 1000px;  /* Vertically center the text */
     right: 3%;  /* Horizontally center the text */
     text-align: right;  /* Center the text */
     max-width: 32%;  /* Prevent text from overflowing the container */
@@ -397,7 +397,7 @@ nav {
 
 #slx-overlay3 {
     position: absolute;
-    top: 2050px;  /* Vertically center the text */
+    top: 1990px;  /* Vertically center the text */
     left: 3%;  /* Horizontally center the text */
     text-align: left;  /* Center the text */
     max-width: 40%;  /* Prevent text from overflowing the container */
@@ -740,7 +740,8 @@ nav {
 
 
  #yoga {
-    background: linear-gradient(to bottom, #F6E6F9, #0CB8CE); /* Ombre effect from current to nav color */
+    background: linear-gradient(to bottom, #F6E6F9, green); /* Ombre effect from current to nav color */
+    padding: 50px;
  }
 
  #yoga h2 {
@@ -750,13 +751,13 @@ nav {
 
 .yoga-content {
     background-color: #f9f9f9; /* Light background for contrast */
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-family: Poppins;
     flex: 1;
     max-width: 600px; /* Adjust width as needed */
-    margin-left: auto; /* Align to the right */
+    margin-left: auto;
 }
 
 .schedule-button {
