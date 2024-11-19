@@ -543,13 +543,24 @@ nav {
     margin: 20px; /* Space between images */
     transition: transform 0.3s, filter 0.3s; /* Smooth transition for scaling and filter */
     object-fit: contain; /* Maintain aspect ratio while fitting in the specified size */
-    filter: grayscale(100%) brightness(0); /* Make images black */
+    filter: grayscale(100%) brightness(100%) contrast(1000%) invert(100%); /* Make images white */
+}
+
+.accolade-image-white {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height to ensure uniformity */
+    margin: 20px; /* Space between images */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for scaling and filter */
+    object-fit: contain; /* Maintain aspect ratio while fitting in the specified size */
 }
 
 .accolade-image:hover {
     transform: scale(1.2); /* Scale up on hover */
 }
 
+.accolade-image-white:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
 #about {
     background: linear-gradient(to bottom, #6A8D3C, #1B4F15 );
     overflow-x: hidden;  /* Prevent horizontal scrolling */
