@@ -471,8 +471,8 @@ nav {
 }
 
 .film-image {
-    width: 450px; /* New width */
-    height: 253px; /* Adjusted height */
+    width: 300px; /* New width */
+    height: 169px; /* Adjusted height */
     border-radius: 15px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.3s; /* Smooth transition for hover effect */
@@ -561,16 +561,26 @@ nav {
         margin-bottom: 50px;
 }
 .credits-list {
-
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
+    font-family: 'Poppins'; /* Use the Hello font */
+    font-size: 35px; /* Adjust font size as needed */
     color:white; /* Set the color of the intro text */
     margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
     text-align: center;
-    padding-top: 200px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 200px;
+    font-weight: bold;
+    color: #F6E6F9;
+}
+
+.credits-list a {
+    text-decoration: none;
+    color: #DB7BCB;
+}
+
+.credits-list a:hover {
+    text-decoration: none;
+    color: #1B4F15;
 }
 
 #about h2 {
