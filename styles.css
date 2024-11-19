@@ -250,8 +250,8 @@ nav {
 #SLX {
     width: 100%;  /* Make sure each div under #SLX takes up the full width */
     text-align: center;  /* Center the image horizontally */
-    margin-bottom: 10px;  /* Optional: space between images */
     position: relative;
+    margin: 0px;
 }
 
 #work-container {
@@ -311,8 +311,6 @@ nav {
     width: 100%; /* Full width of the viewport */
     height: 100vh; /* Full viewport height */
     box-sizing: border-box; /* Include padding and borders in width/height */
-    margin-top: 40px;
-    margin-bottom: 10px;
 }
 
 
@@ -356,9 +354,7 @@ nav {
     font-weight: bold;
 }
 
-#SLX {
-     position: relative;
-}
+
 #slx-overlay2 {
     position: absolute;
     top: 1200px;  /* Vertically center the text */
