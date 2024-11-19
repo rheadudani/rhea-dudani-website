@@ -103,6 +103,7 @@ nav {
     background: linear-gradient(to bottom, #F6E6F9, #469E6F); /* Ombre effect from current to nav color */
     justify-content: space-between; /* Distribute space between children */
     padding: 50px;
+    height: 100vh;
 
 }
 
@@ -741,12 +742,12 @@ nav {
     padding-right: 50px;
     padding-bottom: 50px;
     display: flex;
-    height: 100vw;
+    height: 100vh;
  }
 
  #classched {
       background: linear-gradient(to bottom, #F6E6F9, green);
-      height: 99vw;
+      height: 99vh;
  }
 
  #yoga h2 {
@@ -821,7 +822,7 @@ video {
 
  #writing {
     background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
-    height: 100vw;
+    height: 100vh;
 
  }
 
