@@ -181,7 +181,7 @@ nav {
 }
 
 #work {
-    background: linear-gradient(to bottom, black, #222222); /* Gradient from nav color to transparent */
+    background: black;
     margin: 0;
 }
 
@@ -255,8 +255,33 @@ nav {
     margin: 0px;
 }
 
+#grey-bkgd {
+    position: relative; /* Allow contained positioning for the image */
+    z-index: 10; /* Place it beneath other elements */
+    width: 101vw;
+    height: 200px; /* Limit the height to the intended area */
+    overflow: hidden; /* Prevent the image from spilling outside */
+}
+
+#grey-bkgd img {
+    position: absolute; /* Precise positioning */
+    top: 0; /* Ensure it starts at the top of #grey-bkgd */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Ensure it spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Ensure the image doesn’t exceed container height */
+}
+
+#full-grey-bkgd {
+    position: relative; /* Ensure it stacks properly */
+    z-index: 2; /* Layer above #grey-bkgd */
+    background: #71805b;
+    width: 100vw;
+    padding: 50px 0; /* Adjust for spacing inside the section */
+}
+
 #work-container {
-        margin-bottom: 50px; 
+        margin-bottom: 10px; 
 }
 
 #SLX img {
@@ -575,11 +600,11 @@ nav {
     font-family: 'Poppins'; /* Use the Hello font */
     font-size: 35px; /* Adjust font size as needed */
     color:white; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
+    margin-bottom: 0px; /* Space between intro and typing text */
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     font-weight: bold;
     color: #F6E6F9;
 }
@@ -714,41 +739,39 @@ nav {
     position: relative; /* Ensures it stacks properly */
 }
 
- #podcast-intro {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
-    color: #0CB8CE; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
-    text-align: right;
-     position: absolute; /* Position it absolutely */
-    width: 59%;
-    right: 0;
-    padding-top: 120px;
-    padding-left: 40px;
-    padding-right: 100px;
-    padding-bottom: 40px;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
- }
-
- .signs-image {
-    padding-top: 100px;
-    position: absolute;
-    left: 0;
-    padding-left: 500px;
-
- }
-
-.signs-image img {
-    padding: 0; /* Remove padding to prevent distortion */
-    border-radius: 50%; /* Make the image circular */
-    position: absolute;
-    left: 0;
-    width: 280px; /* Fixed width */
-    height: 280px; /* Set height equal to width for a perfect circle */
-    object-fit: cover; /* Ensure the image covers the circular area */
+.podcast-section {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
 }
 
+#podcast-intro {
+    font-family: 'Poppins', Arial, sans-serif; 
+    font-size: 30px; /* Slightly smaller for better fit */
+    color: #0CB8CE; 
+    text-align: right;
+    position: relative; 
+    top: 20%; /* Adjust placement within section */
+    left: 20%; /* Padding from right edge */
+    width: 50%; /* Adjust width for better layout */
+    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6);
+    line-height: 1.5; /* Improve text spacing */
+}
+
+.signs-image {
+    position: relative; 
+    top: 20%; /* Position below the intro */
+    left: 100px; /* Padding from left edge */
+    width: 300px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.signs-image img {
+    width: 100%; /* Scale to parent width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; 
+    object-fit: cover; 
+}
 .blue-border {
     border: 5px solid #0CB8CE; /* Use your pink color */
     border-radius: 12px; /* Match the existing border-radius */
@@ -888,15 +911,29 @@ video {
 
 section {
     text-align: center;
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    min-height: 100vh; /* Ensures the section fills at least the full viewport height */
+    overflow: hidden; /* Prevents background overflow */
+    position: relative;
 }
 
 #about-footer {
     background: #1B4F15;
     color: #F6E6F9;
     text-align: center;
-    padding: 1rem 0;
     font-family: 'Poppins';
 }
+
+#about-footer a{ 
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove the underline from the link */
+    color: #F6E6F9;; /* Set the text color to black (or any color you prefer) */
+    font-size: 1.5rem; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+
+}
+
+
 
 footer {
     background: #469E6F;
