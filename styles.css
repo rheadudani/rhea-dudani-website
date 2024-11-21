@@ -786,7 +786,6 @@ nav {
     padding-right: 50px;
     padding-bottom: 50px;
     display: flex;
-    height: 100vh;
  }
 
  #classched {
@@ -798,10 +797,6 @@ nav {
     color: #F6E6F9;
  }
 
-video {
-  width: 100%;   /* Make the video take up the full width of its container */
-  height: auto;  /* Maintain the aspect ratio of the video */
-}
 
 #yoga-headline h1 {
     letter-spacing: 2px;
