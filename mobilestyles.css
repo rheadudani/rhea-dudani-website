@@ -45,8 +45,8 @@
     }
 
     .home-image {
-        width: 200px; /* Shrink the image for smaller screens */
-        height: 200px; /* Maintain circular shape */
+        width: 250px; /* Shrink the image for smaller screens */
+        height: 250px; /* Maintain circular shape */
         margin: 20px auto; /* Center image with margin */
         display: block;
     }
