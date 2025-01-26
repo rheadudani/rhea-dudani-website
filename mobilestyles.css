@@ -158,8 +158,8 @@
     }
 
     .home-image {
-        width: 150px; /* Further shrink the image */
-        height: 150px; /* Maintain circular shape */
+        width: 200px; /* Further shrink the image */
+        height: 200px; /* Maintain circular shape */
     }
 
      #about-section {
