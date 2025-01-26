@@ -122,6 +122,75 @@
         font-size: 14px; /* Reduce font size */
         margin-top: 15px; /* Adjust spacing */
     }
+
+  #sound {
+        padding: 20px; /* Add padding to prevent text overflow */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    #sound h2 {
+        font-size: 35px; /* Reduce heading size */
+        text-align: center; /* Center-align the heading */
+        margin: 10px 0; /* Add spacing */
+    }
+
+    #music-intro {
+        font-size: 18px; /* Reduce font size */
+        padding: 10px; /* Compact padding */
+        position: relative; /* Change to relative positioning */
+        top: 0; /* Reset top alignment */
+        left: 0; /* Reset left alignment */
+        width: 100%; /* Ensure content fits the viewport */
+        text-align: center; /* Center-align text */
+        margin: 10px auto; /* Center the intro text */
+        line-height: 1.5; /* Add line spacing for readability */
+    }
+
+    #strawberries-song {
+        font-size: 16px; /* Adjust font size */
+        padding: 10px; /* Compact padding */
+        position: relative; /* Change to relative positioning */
+        top: 0; /* Reset top alignment */
+        left: 0; /* Reset left alignment */
+        width: 100%; /* Ensure content fits the viewport */
+        margin: 20px auto; /* Center the content */
+        text-align: center; /* Center-align text */
+        line-height: 1.4; /* Improve text spacing */
+    }
+
+    .iphone-music img {
+        width: 80%; /* Scale image width */
+        margin: 20px auto; /* Center the image */
+        display: block; /* Ensure proper centering */
+    }
+
+    .overlay {
+        background-color: rgba(255, 105, 180, 0.7); /* Adjust overlay transparency */
+    }
+
+    .pink-border {
+        border-width: 3px; /* Reduce border size */
+        padding: 5px; /* Compact padding */
+    }
+
+    .podcast-section {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Let height adjust dynamically */
+        padding: 10px; /* Compact layout */
+    }
+
+    #podcast-intro {
+        font-size: 18px; /* Reduce font size */
+        width: 90%; /* Adjust width for better fit */
+        text-align: center; /* Center-align text */
+        margin: 10px auto; /* Add spacing */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    .signs-image {
+        width: 200px; /* Shrink image size */
+        margin: 20px auto; /* Center the image */
+    }
 }
 
 /* Mobile Styles for Screens Up to 480px (Small Smartphones) */
@@ -136,7 +205,7 @@
     }
 
     .nav-center h1 {
-        font-size: 20px; /* Smaller title size */
+        font-size: 35px; /* Smaller title size */
     }
 
     #home {
@@ -204,5 +273,51 @@
     .schedule-button {
         font-size: 12px; /* Smaller button font size */
         padding: 6px 12px; /* Compact button size */
+    }
+
+#sound {
+        padding: 10px; /* Further reduce padding */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    #sound h2 {
+        font-size: 28px; /* Further reduce heading size */
+        margin: 5px 0; /* Adjust spacing */
+    }
+
+    #music-intro {
+        font-size: 16px; /* Smaller text */
+        padding: 10px; /* Compact padding */
+        width: 100%; /* Ensure text fits the screen */
+        margin: 10px auto; /* Center the content */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    #strawberries-song {
+        font-size: 14px; /* Adjust font size */
+        padding: 10px; /* Compact padding */
+        width: 100%; /* Ensure content fits the screen */
+        margin: 10px auto; /* Center the content */
+        line-height: 1.4; /* Improve text spacing */
+    }
+
+    .iphone-music img {
+        width: 70%; /* Further shrink image */
+        margin: 10px auto; /* Center the image */
+    }
+
+    .podcast-section {
+        padding: 10px; /* Compact layout */
+    }
+
+    #podcast-intro {
+        font-size: 16px; /* Smaller text */
+        margin: 10px auto; /* Center the content */
+        width: 90%; /* Ensure it fits within the viewport */
+    }
+
+    .signs-image {
+        width: 150px; /* Shrink image further */
+        margin: 10px auto; /* Center the image */
     }
 }
