@@ -54,6 +54,74 @@
     .highlight {
         padding: 0 5px; /* Reduce padding in highlights */
     }
+
+    /* about section */
+    #about-section {
+        margin: 20px; /* Reduce margins for smaller screens */
+    }
+
+    .credits-list {
+        font-size: 24px; /* Reduce font size */
+        padding-left: 20px; /* Adjust padding */
+        padding-right: 20px;
+        padding-bottom: 50px; /* Reduce bottom padding */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center-align text */
+    }
+
+    .about-text {
+        font-size: 14px; /* Reduce font size */
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center-align text */
+    }
+
+    .about-image img {
+        width: 250px; /* Reduce image size */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    #yoga {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    #yoga img {
+        width: 300px; /* Shrink image width */
+        margin: 0 auto 20px; /* Center image and add space below */
+    }
+
+    #classched {
+        height: auto; /* Let the height adjust dynamically */
+        padding: 20px; /* Add padding for content */
+    }
+
+    #yoga-headline h1 {
+        font-size: 20px; /* Reduce headline font size */
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    .yoga-content {
+        max-width: 100%; /* Allow content to take up full width */
+        padding: 20px; /* Reduce padding for compact layout */
+        margin: 0 auto; /* Center content */
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    .yoga-schedule {
+        font-size: 18px; /* Reduce font size */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    .schedule-button {
+        padding: 8px 16px; /* Smaller button size */
+        font-size: 14px; /* Reduce font size */
+        margin-top: 15px; /* Adjust spacing */
+    }
 }
 
 /* Mobile Styles for Screens Up to 480px (Small Smartphones) */
@@ -92,5 +160,49 @@
     .home-image {
         width: 150px; /* Further shrink the image */
         height: 150px; /* Maintain circular shape */
+    }
+
+     #about-section {
+        margin: 10px; /* Further reduce margins for smaller devices */
+    }
+
+    .credits-list {
+        font-size: 20px; /* Further reduce font size */
+        padding-bottom: 30px; /* Reduce bottom padding */
+    }
+
+    .about-text {
+        font-size: 12px; /* Smaller font size for compact screens */
+        padding: 10px;
+    }
+
+    .about-image img {
+        width: 200px; /* Shrink image further */
+    }
+
+    #yoga {
+        padding: 10px; /* Minimize padding further */
+    }
+
+    #yoga img {
+        width: 200px; /* Further shrink image size */
+    }
+
+    #yoga-headline h1 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .yoga-content {
+        font-size: 14px; /* Smaller text for very small screens */
+        padding: 15px; /* Compact padding */
+    }
+
+    .yoga-schedule {
+        font-size: 16px; /* Reduce font size further */
+    }
+
+    .schedule-button {
+        font-size: 12px; /* Smaller button font size */
+        padding: 6px 12px; /* Compact button size */
     }
 }
