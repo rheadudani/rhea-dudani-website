@@ -1,0 +1,96 @@
+/* Mobile Styles for Screens Up to 768px (iPhone Landscape and Portrait) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Reduce padding for the header */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+        gap: 1px; /* Add space between items */
+    }
+
+    nav a {
+        font-size: 12px; /* Reduce font size */
+        margin: 5px 0; /* Adjust spacing between links */
+        text-decoration: none; /* Ensure underline stays off */
+    }
+
+    .nav-center h1 {
+        font-size: 40px; /* Smaller title size */
+        margin: 10px 0; /* Add space above and below the title */
+    }
+ /* Hero Section */
+    #home {
+        padding: 20px; /* Reduce padding around the section */
+    }
+
+    .intro-container {
+        width: 90%; /* Expand intro width */
+        top: 30%; /* Adjust vertical alignment */
+        right: 0; /* Ensure alignment remains to the right */
+        text-align: center; /* Center align text */
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    #intro-line {
+        font-size: 18px; /* Reduce font size */
+        margin-bottom: 5px; /* Adjust spacing */
+    }
+
+    #typing-text {
+        font-size: 20px; /* Reduce font size */
+    }
+
+    .home-image {
+        width: 200px; /* Shrink the image for smaller screens */
+        height: 200px; /* Maintain circular shape */
+        margin: 20px auto; /* Center image with margin */
+        display: block;
+    }
+
+    .highlight {
+        padding: 0 5px; /* Reduce padding in highlights */
+    }
+}
+
+/* Mobile Styles for Screens Up to 480px (Small Smartphones) */
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0; /* Further reduce padding */
+    }
+
+    nav a {
+        font-size: 12px; /* Even smaller font size for links */
+        padding: 3px 5px; /* Compact padding */
+    }
+
+    .nav-center h1 {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    #home {
+        padding: 10px; /* Minimize padding */
+    }
+
+    .intro-container {
+        width: 100%; /* Full width for better fit */
+        top: 35%; /* Adjust vertical alignment */
+        margin-top: 30px;
+    }
+
+    #intro-line {
+        font-size: 16px; /* Smaller text for very small screens */
+    }
+
+    #typing-text {
+        font-size: 18px; /* Match font size with intro text */
+    }
+
+    .home-image {
+        width: 150px; /* Further shrink the image */
+        height: 150px; /* Maintain circular shape */
+    }
+}
