@@ -391,30 +391,6 @@ nav {
 }
 
 
-#workintro-overlay {
-    position: relative;
-    top: -300px;  /* Vertically center the text */
-    text-align: center;  /* Center the text */
-    max-width: 100%;  /* Prevent text from overflowing the container */
-    z-index: 12;  /* Ensure text is on top of the image */
-}
-
-@media (max-width: 768px) {
-    #workintro-overlay {
-        max-width: 90%; /* Allow it to take up more space on smaller screens */
-        font-size: 12px; /* Scale down the font */
-        padding: 15px; /* Adjust padding */
-    }
-}
-
-@media (max-width: 480px) {
-    #workintro-overlay {
-        max-width: 95%; /* Use almost full width for very small screens */
-        font-size: 14px; /* Further reduce font size */
-        padding: 10px; /* Reduce padding for a compact look */
-    }
-}
-
 #work-intro {
     font-family: 'Poppins';
     font-size: 35px;
