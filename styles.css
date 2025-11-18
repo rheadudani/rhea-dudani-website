@@ -124,7 +124,7 @@ body { padding-top: 0; }
   margin: 20px;
   text-align: center;
   font-family: Arial, sans-serif;
-  padding: 50px;
+  padding: 40px;
 }
 
 /* ==========================
@@ -136,7 +136,7 @@ body { padding-top: 0; }
   align-items: center;
   justify-content: center;
   gap: 60px;
-  min-height: 100vh;
+  min-height: 80vh;
   text-align: center; /* centers text within intro-container by default */
 }
 
