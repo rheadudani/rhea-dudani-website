@@ -1,184 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
 
+/* Custom Font */
 @font-face {
-    font-family: 'Dela Gothic One'; /* Name for the font */
-    src: url('fonts/DelaGothicOne-Regular.ttf') format('truetype'); /* Path to your font file */
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Bugaki';
+  src: url('fonts/Bugaki.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Hello'; /* Name for the font */
-    src: url('fonts/Hello.otf') format('opentype'); /* Path to your font file */
-    font-weight: normal;
-    font-style: normal;
+/* ==========================
+   BASE STYLING
+========================== */
+* { box-sizing: border-box; }
+
+html, body {
+  background: #000;
+  color: #cb6ce6;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Smooth anchor scroll */
+html { scroll-behavior: smooth; }
 
-body {
-    font-family: Arial, sans-serif; /* Fallback font */
-    background-color: #F6E6F9; /* Set background color */
-    margin: 0;
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
+a {
+  color: #cb6ce6;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+a:hover { opacity: 0.7; }
+
+/* ==========================
+   HEADER (now non-sticky)
+========================== */
+.header {
+  position: static; /* was: fixed */
+  top: auto;
+  left: auto;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
 }
 
-h2 {
-    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
-    font-size: 55px;
+.header-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 28px;
+  box-sizing: border-box;
 }
 
-header {
-    background: transparent; /* Clear background */
-    color: black; /* Change text color to black */
+/* LEFT NAVIGATION */
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-family: 'Bugaki', sans-serif;
+}
+.vertical-nav a {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* Distributes items evenly */
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+/* RIGHT TITLE */
+.title-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Bugaki', sans-serif;
+  font-size: 33px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  color: #cb6ce6;
+}
+.title-right .star { opacity: 0.7; }
+
+/* No offset needed since header is static */
+body { padding-top: 0; }
+
+/* ==========================
+   GALLERY (WORK)
+========================== */
+.gallery {
+  max-width: 98%;
+  margin: 50px auto;
+  padding: 20px 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  box-sizing: border-box;
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 0px solid #cb6ce6;
+  display: block;
 }
 
-
-
-.nav-left,
-.nav-right {
-    display: flex;
-    flex: auto;
-    justify-content: center; /* Align items to the start */
-}
-.nav-left a,
-.nav-right a {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the custom font */
-    color: #1B4F15; /*light green*/
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth transition for hover effects */
-    font-size: 20px; /* Increased font size */
-    font-weight: bold; /* Bold for better visibility */
-    padding: 15px;
-    padding-top: 30px;
+/* ==========================
+   NAME
+========================== */
+.name h1 {
+  max-width: 98%;
+  font-size: 190px;
+  margin: 20px;
+  text-align: center;
+  padding-bottom: 100px;
 }
 
-.nav-left-work a,
-.nav-right-work a {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the custom font */
-    color: white; 
-    text-decoration: none;
-    transtion: color 0.3s; /* Smooth transition for hover effects */
-    font-size: 20px; /* Increased font size */
-    font-weight: bold; /* Bold for better visibility */
-    padding: 15px;
-    padding-top: 30px;
-}
-.nav-left a:hover,
-.nav-right a:hover {
-    color: #DB7BCB; /* Change text color on hover */
+/* ==========================
+   SECTION DIVIDERS
+========================== */
+
+.sectionals h1 {
+  max-width: 98%;
+  font-size: 300px;
+  margin: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 50px;
 }
 
-.nav-left-work a:hover,
-.nav-right-work a:hover {
-    color: #DB7BCB; /* Change text color on hover */
-}
-
-
-.nav-center {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.nav-center h1 {
-    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the same font */
-    font-size: 55px; /* Increased size */
-    font-weight: bold; /* Bold for emphasis */
-    color: #1B4F15; /* Set link color to #0CB8CE */
-}
-
-
+/* ==========================
+   HOME SECTION
+========================== */
 #home {
-    position: relative; /* Allow absolute positioning of children */
-    overflow: hidden; /* Hide overflow for a cleaner look */
-    background: linear-gradient(to bottom, #F6E6F9, #469E6F); /* Ombre effect from current to nav color */
-    justify-content: space-between; /* Distribute space between children */
-    padding: 50px;
-    height: 100vh;
-
-}
-
-.intro-container {
-    position: absolute;
-    top: 20%; /* Adjust as needed */
-    right: 0; /* Align to the right */
-    width: 65%; /* Adjust width to span from center to right */
-    text-align: right; /* Right-align text */
-    padding: 10px; /* Add padding around intro text */
-    box-sizing: border-box; /* Include padding in width calculation */
-    padding-right: 40px;
-}
-
-#intro-line {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 35px; /* Adjust font size as needed */
-    color: #222222; /* Set the color of the intro text */
-    margin-bottom: 1px; /* Space between intro and typing text */
-    z-index: 1;
-    text-shadow: 3px 3px 6px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
-}
-
-
-.typing-container {
-    position: absolute; /* Keep it positioned absolutely */
-    top: calc(30% + 60px); /* Adjust to be directly below the intro line */
-    right: 0; /* Align to the right */
-    width: 56%; /* Match the width of intro-line */
-    text-align: right; /* Right-align text */
-    padding: 10px; /* Match padding with intro-line */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-#typing-text {
-    font-family: 'Dela Gothic One', Arial, sans-serif; /* Use the custom font */
-    font-size: 55px; /* Match the size or adjust as needed */
-    color: #F6E6F9; /* Set the text color */
-    z-index: 0; /* Keep it behind the intro text */
-    text-align: right; /* Ensure right alignment */
-}
-
-.image-container {
-    margin-right: 20px; /* Space between image and text */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  min-height: 100vh;
+  padding: 80px 60px;
+  text-align: center; /* centers text within intro-container by default */
 }
 
 .home-image {
-    width: 450px; /* Fixed width for circular crop */
-    height: 450px; /* Fixed height to match width */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the entire area */
-    display: block; /* Center image block */
-    padding-left: 10px; /* Slightly move image content to the right */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+  width: 45%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 0;
 }
 
-.home-image:hover {
-    transform: scale(1.05); /* Scale up on hover */
+.intro-container {
+  width: 45%;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  line-height: 1.15;
+  display: flex;
+  color: #cb6ce6;
+  flex-direction: column;
+  align-items: center;  /* center the intro text block */
+  justify-content: center;
+}
+
+#intro-line {
+  text-align: center; /* ensures main line is centered */
+}
+
+/* Right-align the dynamic text specifically */
+#typing-text {
+  width: 90%;
+  text-align: center;
+}
+
+#dynamic-text {
+  font-weight: bold;
+  padding-right: 5px;
+  animation: blink 1s step-start infinite;
+  color: white;
+  font-family: 'Bugaki', sans-serif;
+  font-size: 40px;
 }
 
 .highlight {
-    background-color: #F6E6F9; /* Highlight color */
-    padding: 0 7px; /* Horizontal padding for spacing */
-    border-radius: 50px; /* Optional: rounded corners */
+  font-weight: bold;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* ==========================
+   ABOUT SECTION (FIXED: not inside a media query)
+========================== */
+#about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 80px 40px;
+  color: #cb6ce6;
+}
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  flex-wrap: wrap; /* wraps on small screens */
+}
+.about-text {
+  flex: 1 1 500px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 40px;
 }
 
-.blue-highlight {
-    color:  #DB7BCB; /* Highlight color */
+.about-image {
+  padding-right: 20px;
+}
+.about-image img {
+  width: 420px;
+  height: auto;
+  border-radius: 20px;      /* rounded corners */
+  border: 2px solid #cb6ce6;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.about-image img:hover { transform: scale(1.03); opacity: 0.9; 
 }
 
-.contact {
-    text-decoration: none;
-    color: #F6E6F9;
-    font-weight: bold;
+/* ==========================
+   CONTACT / GENERAL PAGE SECTIONS
+========================== */
+.page-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: #cb6ce6;
+  line-height: 1.7;
 }
+.page-section h2 {
+  font-family: 'Bugaki', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* ==========================
+   EXPANDED OVERLAY
+========================== */
+.expanded {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.expanded img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid #cb6ce6;
+}
+.overlay-info {
+  position: absolute;
+  bottom: 40px;
+  color: #cb6ce6;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/* section for work */
 
 #work {
     background: black;
@@ -248,11 +343,22 @@ nav {
 }
 
 
+/* Adjust #SLX images so they're smaller, spaced, and rounded */
 #SLX {
-    width: 100%;  /* Make sure each div under #SLX takes up the full width */
-    text-align: center;  /* Center the image horizontally */
-    position: relative;
-    margin: 0px;
+  width: 95%;                 /* narrower than full page */
+  margin: 40px auto;          /* space above/below and center horizontally */
+  text-align: center;
+}
+
+#SLX img {
+  width: 100%;         /* limits image width on large screens */
+  max-width: 95%;
+  height: auto;
+  border-radius: 5px;        /* rounded edges */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;             /* center the image */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* optional soft shadow for depth */
 }
 
 #grey-bkgd {
@@ -275,7 +381,7 @@ nav {
 #full-grey-bkgd {
     position: relative; /* Ensure it stacks properly */
     z-index: 2; /* Layer above #grey-bkgd */
-    background: #71805b;
+    background: black;
     width: 100vw;
     padding: 50px 0; /* Adjust for spacing inside the section */
 }
@@ -490,7 +596,7 @@ nav {
 .film-image {
     width: 300px; /* New width */
     height: 169px; /* Adjusted height */
-    border-radius: 15px; /* Rounded edges */
+    border-radius: 5px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.3s; /* Smooth transition for hover effect */
 }
@@ -578,354 +684,46 @@ nav {
 .accolade-image-white:hover {
     transform: scale(1.2); /* Scale up on hover */
 }
-#about {
-    background: linear-gradient(to bottom, #6A8D3C, #1B4F15 );
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
-}
 
-#about-section {
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 50px;
-}
-.credits-list {
-    font-family: 'Poppins'; /* Use the Hello font */
-    font-size: 35px; /* Adjust font size as needed */
-    color:white; /* Set the color of the intro text */
-    margin-bottom: 0px; /* Space between intro and typing text */
-    text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 100px;
-    font-weight: bold;
-    color: #F6E6F9;
-}
-
-.credits-list a {
-    text-decoration: none;
-    color: #DB7BCB;
-}
-
-.credits-list a:hover {
-    text-decoration: none;
-    color: #1B4F15;
-}
-
-#about h2 {
-    font-family: Dela Gothic One;
-    color:#0CB8CE; /* Text color for visibility */
-    font-size: 55px;
-}
-
-.about-container {
-    display: flex;
-    align-items: flex-start; /* Align items at the start */
-}
-
-.about-text {
-    font-family: 'Poppins', sans-serif; 
-    background: linear-gradient(to bottom, #DB7BCB , #F6E6F9); /* Gradient from nav color to transparent */
-    -webkit-background-clip: text; /* For Safari */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
-    text-align: left; /* Right justify text */
-    flex: 1; /* Take up available space */
-    padding-right: 20px; /* Space between text and image */
-    padding-left: 20px;
-    z-index: 1;
-}
-
-.about-text {
-    font-size: 16px;
-}
-
-.about-image {
-    flex: 0 0 auto; /* Keep the image container's size as is */
-    padding-top: 18px;
-    padding-right: 40px;
-    padding-left: 40px;
-    z-index: 0;
-}
-
-.about-image img {
-    width: 450px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50px; /* Adjust the rounding of edges */
-    max-height: 500px;
-    object-fit: cover; /* Ensure the image covers the entire area */
-}
-
-.about-image:hover {
-    transform: scale(1.07); /* Scale up on hover */
-    opacity: 0.9;
-}
-
-#sound { 
-    background: black;
- }
-
- #sound h2 {
-    color: #F6E6F9;
-    font-size: 55px;
- }
-
-
-#music-intro {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 40px; /* Adjust font size as needed */
-    color: #0CB8CE; /* Set the color of the intro text */
-    text-align: left;
-    padding-top: 140px;
-    padding-left: 100px;
-    padding-right: 40px;
-    padding-bottom: 100px;
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6); /* Adjust the values as needed */
-    z-index: 1;
-    position: absolute; /* Position it absolutely */
-    top: 0; /* Align it to the top */
-    left: 0; /* Align it to the left */
-    width: 50%; /* Take up half of the screen */
-    height: auto; /* Allow height to adjust based on content */
-}
-
-#strawberries-song {
-    position: absolute; /* Position it absolutely */
-    top: 0; /* Align it to the top */
-    padding-top: 500px;
-    left: 0; /* Align to the left */
-    width: 60%; /* Full width */
-    z-index: 1; /* Ensure it’s below the music intro */
-    padding-left: 35px;
-    padding-right: 40px;
-    padding-bottom: 100px;
-}
-
-.iphone-music {
-    position: relative; /* Allows positioning of the overlay */
-    display: inline-block; /* Ensures the image is treated as a block for overlay */
-}
-
-.iphone-music img {
-    transition: opacity 0.3s; /* Smooth transition for the image */
-    display: block; /* Ensures the image fills the container */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 105, 180, 0.5); /* Pink overlay */
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s; /* Smooth transition for the overlay */
-}
-
-.iphone-music:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-}
-
-.pink-border {
-    border: 5px solid #F6E6F9; /* Use your pink color */
-    border-radius: 12px; /* Match the existing border-radius */
-    padding: 10px; /* Optional: Add some padding if desired */
-    position: relative; /* Ensures it stacks properly */
-}
-
-.podcast-section {
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
-}
-
-#podcast-intro {
-    font-family: 'Poppins', Arial, sans-serif; 
-    font-size: 30px; /* Slightly smaller for better fit */
-    color: #0CB8CE; 
-    text-align: right;
-    position: relative; 
-    top: 20%; /* Adjust placement within section */
-    left: 20%; /* Padding from right edge */
-    width: 50%; /* Adjust width for better layout */
-    text-shadow: 2px 2px 5px rgba(246, 230, 249, 0.6);
-    line-height: 1.5; /* Improve text spacing */
-}
-
-.signs-image {
-    position: relative; 
-    top: 20%; /* Position below the intro */
-    left: 100px; /* Padding from left edge */
-    width: 300px; /* Adjust width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.signs-image img {
-    width: 100%; /* Scale to parent width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; 
-    object-fit: cover; 
-}
-.blue-border {
-    border: 5px solid #0CB8CE; /* Use your pink color */
-    border-radius: 12px; /* Match the existing border-radius */
-    padding: 10px; /* Optional: Add some padding if desired */
-}
-
-
-
- #yoga {
-    background: linear-gradient(to bottom, #F6E6F9, green); /* Ombre effect from current to nav color */
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    display: flex;
- }
-
- #classched {
-      background: linear-gradient(to bottom, #F6E6F9, green);
-      height: 99vh;
- }
-
- #yoga h2 {
-    color: #F6E6F9;
- }
-
-
-#yoga-headline h1 {
-    letter-spacing: 2px;
-    padding-bottom: 40px;
-    font-family: 'Poppins';
-    color: #168143;
-    margin: 20px;
-    font-size: 25px;
-    text-align: center;
-}
-.yoga-content {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-family: Poppins;
-    flex: 1;
-    max-width: 600px; /* Adjust width as needed */
-    margin-left: auto;
-}
-
-.yoga-schedule {
-    font-family: 'Montserrat';
-    letter-spacing: 3px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.yoga-schedule p {
-    padding: 23px;
-    color: black;
-}
-
-.yoga-schedule p:hover {
-    color: white;
-}
-
-.yoga-schedule a {
-    text-decoration: none;
-}
-#yoga img {
-    width: 500px;
-    height: auto;
-    border-radius: 30px;
-}
-
-.schedule-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #F6E6F9; /* pink background */
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.schedule-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
- #writing {
-    background: linear-gradient(to bottom, #0CB8CE, #F6E6F9);
-    height: 100vh;
-
- }
-
-#photo {
- background: linear-gradient(to bottom, #F6E6F9, #222222);
-}
-
-.photo h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-    gap: 10px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    transition: transform 0.2s; /* Smooth transition */
-}
-
-/* Specific adjustments for aspect ratios */
-.gallery-item:nth-child(4),
-.gallery-item:nth-child(8) {
-    grid-row: span 2; /* Make these items take up more vertical space */
-}
-
-/* Optional: Add hover effect */
-.gallery-item:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-section {
-    text-align: center;
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    min-height: 100vh; /* Ensures the section fills at least the full viewport height */
-    overflow: hidden; /* Prevents background overflow */
-    position: relative;
-}
-
-#about-footer {
-    background: #1B4F15;
-    color: #F6E6F9;
-    text-align: center;
-    font-family: 'Poppins';
-}
-
-#about-footer a{ 
-    font-weight: bold; /* Make the text bold */
-    text-decoration: none; /* Remove the underline from the link */
-    color: #F6E6F9;; /* Set the text color to black (or any color you prefer) */
-    font-size: 1.5rem; /* Adjust font size */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-
-}
-
-
-
+/* ==========================
+   FOOTER
+========================== */
 footer {
-    background: #469E6F;
-    color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+footer .contact {
+  color: #cb6ce6;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+footer .contact:hover { opacity: 0.7; }
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 850px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 1rem 0;
-    font-family: 'Poppins';
+    gap: 40px;
+  }
+  .about-image img { width: 80%; }
+}
+
+@media (max-width: 768px) {
+  .header-bar { padding: 16px; }
+  .home-image { width: 80%; }
+  .intro-container { font-size: 16px; }
+}
+
+@media (max-width: 560px) {
+  .gallery { grid-template-columns: 1fr; }
+  .title-right { font-size: 14px; gap: 8px; }
+  .vertical-nav a { font-size: 14px; }
 }
