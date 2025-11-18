@@ -112,7 +112,6 @@ body { padding-top: 0; }
   font-size: 190px;
   margin: 20px;
   text-align: center;
-  padding-bottom: 100px;
 }
 
 /* ==========================
@@ -138,7 +137,6 @@ body { padding-top: 0; }
   justify-content: center;
   gap: 60px;
   min-height: 100vh;
-  padding: 80px 60px;
   text-align: center; /* centers text within intro-container by default */
 }
 
@@ -152,7 +150,7 @@ body { padding-top: 0; }
 .intro-container {
   width: 45%;
   font-size: 22px;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.15;
   display: flex;
   color: #cb6ce6;
@@ -596,13 +594,13 @@ body { padding-top: 0; }
 .film-image {
     width: 300px; /* New width */
     height: 169px; /* Adjusted height */
-    border-radius: 5px; /* Rounded edges */
+    border-radius: 10px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    transition: transform 0.5s; /* Smooth transition for hover effect */
 }
 
 .film-image:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .film-title {
@@ -616,6 +614,7 @@ body { padding-top: 0; }
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition for opacity */
     font-family: Poppins;
+    text-align: center;
 }
 
 .work-item:hover .film-title {
