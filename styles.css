@@ -141,10 +141,11 @@ body { padding-top: 0; }
 }
 
 .home-image {
-  width: 45%;
+  width: 40%;
   height: auto;
   border-radius: 12px;
   margin-bottom: 0;
+  border: 4px solid #cb6ce6;
 }
 
 .intro-container {
@@ -592,9 +593,9 @@ body { padding-top: 0; }
 }
 
 .film-image {
-    width: 300px; /* New width */
-    height: 169px; /* Adjusted height */
-    border-radius: 10px; /* Rounded edges */
+    width: 400px; /* New width */
+    height: 225px; /* Adjusted height */
+    border-radius: 9px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.5s; /* Smooth transition for hover effect */
 }
