@@ -47,9 +47,8 @@ a:hover { opacity: 0.7; }
 
 .header-bar {
   width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 28px;
   box-sizing: border-box;
 }
@@ -57,8 +56,7 @@ a:hover { opacity: 0.7; }
 /* LEFT NAVIGATION */
 .vertical-nav {
   display: flex;
-  flex-direction: column;
-  gap: 0px;
+  gap: 30px;
   font-family: 'Bugaki', sans-serif;
 }
 .vertical-nav a {
@@ -69,15 +67,14 @@ a:hover { opacity: 0.7; }
 
 /* RIGHT TITLE */
 .title-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  text-align: center;
   font-family: 'Bugaki', sans-serif;
   font-size: 33px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 20px;
   white-space: nowrap;
   color: #cb6ce6;
+  padding-bottom: 70px;
 }
 .title-right .star { opacity: 0.7; }
 
@@ -102,6 +99,7 @@ body { padding-top: 0; }
   object-fit: cover;
   border: 0px solid #cb6ce6;
   display: block;
+  border-radius: 50px;
 }
 
 /* ==========================
@@ -132,7 +130,7 @@ body { padding-top: 0; }
 ========================== */
 #home {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 60px;
@@ -145,7 +143,7 @@ body { padding-top: 0; }
   height: auto;
   border-radius: 12px;
   margin-bottom: 0;
-  border: 4px solid #cb6ce6;
+  border: 0px solid #cb6ce6;
 }
 
 .intro-container {
@@ -209,19 +207,20 @@ body { padding-top: 0; }
 .about-text {
   flex: 1 1 500px;
   font-family: 'Inter', Arial, sans-serif;
+  color: white;
   font-size: 16px;
-  line-height: 1.8;
-  padding-left: 40px;
+  padding-left: 0px;
+  padding-right: 100px;
 }
 
 .about-image {
-  padding-right: 20px;
+  padding-left: 80px;
 }
 .about-image img {
   width: 420px;
   height: auto;
   border-radius: 20px;      /* rounded corners */
-  border: 2px solid #cb6ce6;
+  border: 0px solid #cb6ce6;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -593,8 +592,8 @@ body { padding-top: 0; }
 }
 
 .film-image {
-    width: 400px; /* New width */
-    height: 225px; /* Adjusted height */
+    width: 300px; /* New width */
+    height: 169px; /* Adjusted height */
     border-radius: 9px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.5s; /* Smooth transition for hover effect */
