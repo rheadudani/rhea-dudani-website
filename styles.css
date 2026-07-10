@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap');
+
 
 /* Custom Font */
 @font-face {
@@ -18,16 +20,17 @@
 
 html, body {
   background: #000;
-  color: #cb6ce6;
+  color: #750D1B;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
 }
 
 /* Smooth anchor scroll */
 html { scroll-behavior: smooth; }
 
 a {
-  color: #cb6ce6;
+  color: #FF3E41;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -46,18 +49,19 @@ a:hover { opacity: 0.7; }
 }
 
 .header-bar {
+  display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;   
   align-items: center;
-  padding: 20px 28px;
+  padding: 20px;
   box-sizing: border-box;
 }
-
 /* LEFT NAVIGATION */
 .vertical-nav {
   display: flex;
   gap: 30px;
-  font-family: 'Bugaki', sans-serif;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 .vertical-nav a {
   font-size: 20px;
@@ -73,7 +77,7 @@ a:hover { opacity: 0.7; }
   text-transform: uppercase;
   letter-spacing: 20px;
   white-space: nowrap;
-  color: #cb6ce6;
+  color: #FF4D80;
   padding-bottom: 70px;
 }
 .title-right .star { opacity: 0.7; }
@@ -82,34 +86,15 @@ a:hover { opacity: 0.7; }
 body { padding-top: 0; }
 
 /* ==========================
-   GALLERY (WORK)
-========================== */
-.gallery {
-  max-width: 98%;
-  margin: 50px auto;
-  padding: 20px 5px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  box-sizing: border-box;
-}
-.gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border: 0px solid #cb6ce6;
-  display: block;
-  border-radius: 50px;
-}
-
-/* ==========================
    NAME
 ========================== */
 .name h1 {
   max-width: 98%;
-  font-size: 190px;
-  margin: 20px;
+  font-size: 130px;
+  margin: 0 15px;      /* top/bottom = 0, left/right = 15px */
   text-align: center;
+  letter-spacing: 40px;
+  line-height: 1;      /* tightens the extra space large font-sizes add above/below text */
 }
 
 /* ==========================
@@ -117,17 +102,96 @@ body { padding-top: 0; }
 ========================== */
 
 .sectionals h1 {
-  max-width: 98%;
-  font-size: 300px;
-  margin: 20px;
+  max-width: 97%;
+  font-size: 140px;
   text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 40px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  padding: 0px;
+  margin: 5px;
+  letter-spacing: 10px;
 }
 
 /* ==========================
-   HOME SECTION
+   GALLERY (WORK) — FILM STRIP
 ========================== */
+.gallery {
+  position: relative;
+  max-width: 98%;
+  margin: 50px auto;
+  padding: 20px 5px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+/* Film strip bars, top and bottom */
+.gallery::before,
+.gallery::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 22px;
+  background-color: #FF4D80;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 10px,
+    #750D1B 10px,
+    #750D1B 20px
+  );
+  mask-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 6px,
+    black 6px,
+    black 20px
+  );
+  -webkit-mask-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 6px,
+    black 6px,
+    black 20px
+  );
+}
+
+.gallery::before { top: 0; }
+.gallery::after { bottom: 0; }
+
+/* Each square gallery cell (image + hover video) */
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.gallery-item img,
+.gallery-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover video {
+  opacity: 1;
+}
+
 #home {
   display: flex;
   flex-direction: column;
@@ -149,13 +213,28 @@ body { padding-top: 0; }
 .intro-container {
   width: 45%;
   font-size: 22px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.15;
   display: flex;
-  color: #cb6ce6;
+  color: #FF4D80;
   flex-direction: column;
   align-items: center;  /* center the intro text block */
   justify-content: center;
+  padding-bottom: 100px;
+}
+
+.accolade-container {
+  font-size: 33px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.15;
+  display: flex;
+  justify-content: center;
+  color: #FF4D80;
+  align-items: center;  /* center the intro text block */
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 #intro-line {
@@ -186,6 +265,38 @@ body { padding-top: 0; }
 @keyframes blink { 50% { border-color: transparent; } }
 
 /* ==========================
+   WRITING SECTION 
+========================== */
+
+
+.poster-layout {
+  display: flex;
+  justify-content: center;   /* centers the poster+text group horizontally */
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.screenplay-poster {
+  width: 320px;
+  height: auto;
+  flex-shrink: 0;      /* keeps the poster from shrinking if the text is long */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.screenplay-text {
+  flex: 1;
+  font-size: 30px;
+}
+
+.poster-layout .screenplay-logline {
+  margin: 0;           /* removes the auto-centering margin, since text is left-aligned now */
+}
+
+/* ==========================
    ABOUT SECTION (FIXED: not inside a media query)
 ========================== */
 #about-section {
@@ -202,6 +313,7 @@ body { padding-top: 0; }
   justify-content: center;
   gap: 60px;
   width: 100%;
+  padding-top: 75px;
   flex-wrap: wrap; /* wraps on small screens */
 }
 .about-text {
@@ -321,127 +433,82 @@ body { padding-top: 0; }
     color: green; /* Text turns white when hovered */
 }
 
-.reel {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Use the container height */
-    border-radius: 12px; /* Match the border radius */
-}
  
-
-
-#summary-intro {
-    font-family: 'Poppins', Arial, sans-serif; /* Use the Hello font */
-    font-size: 25px; /* Adjust font size as needed */
-    color:#222222; /* Set the color of the intro text */
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-
 /* Adjust #SLX images so they're smaller, spaced, and rounded */
-#SLX {
-  width: 95%;                 /* narrower than full page */
-  margin: 40px auto;          /* space above/below and center horizontally */
+
+.clippings-strip {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20px);
+  margin: 40px auto;
+  align-items: center;
+}
+
+.SLX {
+  position: relative;
+  width: 90%;
+  margin-top: -15px;   /* creates the overlap between clippings */
   text-align: center;
+  z-index: 1;
 }
 
-#SLX img {
-  width: 100%;         /* limits image width on large screens */
-  max-width: 95%;
+/* Alternate slight rotation, left/right, for a hand-placed feel */
+.SLX:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+.SLX:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+.SLX:nth-child(3n) {
+  transform: rotate(-0.8deg);
+}
+
+.SLX img {
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px;        /* rounded edges */
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;             /* center the image */
-  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* optional soft shadow for depth */
+  margin: 0 auto;
+  border: 6px solid #fdfdf5;      /* off-white "paper" border, like an old clipping */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
 }
 
-#grey-bkgd {
-    position: relative; /* Allow contained positioning for the image */
-    z-index: 10; /* Place it beneath other elements */
-    width: 101vw;
-    height: 200px; /* Limit the height to the intended area */
-    overflow: hidden; /* Prevent the image from spilling outside */
+/* Tape piece — top left */
+.SLX::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 15%;
+  width: 110px;
+  height: 40px;
+  background: rgba(255, 62, 65, 0.6);
+  border: 1px solid rgba(255, 62, 65, 0.8);
+  transform: rotate(-4deg);
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-#grey-bkgd img {
-    position: absolute; /* Precise positioning */
-    top: 0; /* Ensure it starts at the top of #grey-bkgd */
-    left: 0; /* Align to the left edge */
-    width: 100%; /* Ensure it spans the full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Ensure the image doesn’t exceed container height */
+/* Tape piece — bottom right, alternate side for variety */
+.SLX:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  right: 15%;
+  width: 110px;
+  height: 40px;
+  background: rgba(255, 62, 65, 0.6);
+  border: 1px solid rgba(255, 62, 65, 0.8);
+  transform: rotate(3deg);
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
-
-#full-grey-bkgd {
-    position: relative; /* Ensure it stacks properly */
-    z-index: 2; /* Layer above #grey-bkgd */
-    background: black;
-    width: 100vw;
-    padding: 50px 0; /* Adjust for spacing inside the section */
-}
-
 #work-container {
         margin-bottom: 10px; 
 }
 
-#SLX img {
-    width: 100vw;  /* 90% of the viewport width */
-    height: auto;  /* Maintain aspect ratio */
-    object-fit: contain;  /* Ensures the entire image is visible and not cropped */
-    display: block;  /* Removes extra space below the image */
-    justify-content: center;
-}
-
-#slx-overlay {
-    position: absolute;
-    top: 35%;  /* Vertically center the text */
-    left: 3%;  /* Horizontally center the text */
-    color: #F6E6F9;  /* Text color */
-    text-align: left;  /* Center the text */
-    max-width: 40%;  /* Prevent text from overflowing the container */
-    z-index: 10;  /* Ensure text is on top of the image */
-
-}
-
-#slx-overlay h1 {
-    font-family: 'Poppins', sans-serif;  /* Font family */
-    font-size: 24px;  /* Adjust text size */
-    font-weight: bold;  /* Make text bold */
-    letter-spacing: 3px;
-    margin: 0;
-    padding: 0;
-}
-
-#slx-overlay4 h1 {
-    font-family: 'Poppins', sans-serif;  /* Font family */
-    font-size: 24px;  /* Adjust text size */
-    font-weight: bold;  /* Make text bold */
-    letter-spacing: 3px;
-    margin: 0;
-    padding: 0;
-}
-
-#slx-overlay p {
-    font-family: 'Montserrat';
-    color: #F6E6F9;  /* Text color */
-    margin: 0;
-    padding: 0;
-    font-size: 17px;
-}
-
-#slx-container {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    width: 100%; /* Full width of the viewport */
-    height: 100vh; /* Full viewport height */
-    box-sizing: border-box; /* Include padding and borders in width/height */
-}
 
 
 #slx-creds {
@@ -467,8 +534,8 @@ body { padding-top: 0; }
 }
 
 #accolades {
-    width: 150px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height to ensure uniformity */
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height to ensure uniformity */
     object-fit: contain;
     padding-left: 0;
 }
@@ -504,79 +571,44 @@ body { padding-top: 0; }
     font-weight: bold;
 }
 
-#slx-overlay2 p {
-    font-family: 'Montserrat';
-    color: #F6E6F9;  /* Text color */
-    margin: 0;
-    padding: 0;
-    font-size: 17px;
+
+/* ==========================
+   CLAPPERBOARD / SLATE EFFECT
+========================== */
+.slate-wrapper {
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+  border: 3px solid #FF3E41;
+  border-radius: 4px;
+  margin: 60px auto;
+  max-width: 96%;
+  padding-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-
-#slx-overlay3 {
-    position: absolute;
-    top: 1990px;  /* Vertically center the text */
-    left: 3%;  /* Horizontally center the text */
-    text-align: left;  /* Center the text */
-    max-width: 40%;  /* Prevent text from overflowing the container */
-    z-index: 10;  /* Ensure text is on top of the image */
-
+/* The diagonal black/white striped bar, like the clapper sticks */
+.clapper-stripes {
+  height: 40px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f5f5f5 0px,
+    #f5f5f5 30px,
+    #111 30px,
+    #111 60px
+  );
+  border-bottom: 4px solid #000;
 }
 
-#slx-overlay4 {
-     position: absolute;
-    top: 2900px;  /* Vertically center the text */
-    left: 3%;  /* Horizontally center the text */
-    text-align: left;  /* Center the text */
-    max-width: 40%;  /* Prevent text from overflowing the container */
-    z-index: 10;  /* Ensure text is on top of the image */
-
+/* Chalk-style heading text */
+.slate-text {
+  color: #f5f5f5 !important;
+  font-family: 'Inter', sans-serif;
+  text-shadow:
+    0 0 2px rgba(255,255,255,0.4),
+    1px 1px 0 rgba(255,255,255,0.15);
+  letter-spacing: 14px;
 }
 
-#slx-overlay4 p {
-    font-family: 'Montserrat';
-    color: #F6E6F9;  /* Text color */
-    margin: 0;
-    padding: 0;
-    font-size: 17px;
-    letter-spacing: 6px;
-}
-
-
-#slx-overlay3 p {
-    font-family: 'Montserrat';
-    color: #F6E6F9;  /* Text color */
-    margin: 0;
-    padding: 0;
-    font-size: 17px;
-    letter-spacing: 6px;
-}
-
-#slx-overlay3 h1 {
-    font-family: 'Poppins', sans-serif;  /* Font family */
-    font-size: 24px;  /* Adjust text size */
-    font-weight: bold;  /* Make text bold */
-    letter-spacing: 3px;
-    margin: 0;
-    padding: 0;
-}
-
-#slx-overlay2 h1 {
-    font-family: 'Poppins', sans-serif;  /* Font family */
-    font-size: 24px;  /* Adjust text size */
-    font-weight: bold;  /* Make text bold */
-    color: #F6E6F9;  /* Text color */
-    letter-spacing: 6px;
-    margin: 0;
-    padding: 0;
-}
-
-
-#greenbkgd {
-    background: #469E6F;
-    border-radius: 35px;
-    width: 50%;
-}
 
 .work-grid {
     display: flex; /* Use flexbox for layout */
@@ -592,8 +624,8 @@ body { padding-top: 0; }
 }
 
 .film-image {
-    width: 300px; /* New width */
-    height: 169px; /* Adjusted height */
+    width: 250px; /* New width */
+    height: 141px; /* Adjusted height */
     border-radius: 9px; /* Rounded edges */
     object-fit: cover; /* Ensure the image covers the entire area */
     transition: transform 0.5s; /* Smooth transition for hover effect */
@@ -655,13 +687,12 @@ body { padding-top: 0; }
     display: flex; /* Use flexbox for horizontal alignment */
     justify-content: center; /* Center the images */
     flex-wrap: wrap; /* Allow wrapping if necessary */
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 10px;
 }
 
 .accolade-image {
-    width: 150px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height to ensure uniformity */
+    width: 120px; /* Set a fixed width */
+    height: 120px; /* Set a fixed height to ensure uniformity */
     margin: 20px; /* Space between images */
     transition: transform 0.3s, filter 0.3s; /* Smooth transition for scaling and filter */
     object-fit: contain; /* Maintain aspect ratio while fitting in the specified size */
@@ -682,6 +713,15 @@ body { padding-top: 0; }
 
 .accolade-image-white:hover {
     transform: scale(1.2); /* Scale up on hover */
+}
+
+
+hr {
+  border: none;
+  height: 6px;
+  background-color: #750D1B; /* or whatever color you want */
+  width: 90%;
+  margin: 0px auto;
 }
 
 /* ==========================
