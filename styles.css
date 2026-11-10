@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 /* Custom Font */
@@ -296,6 +294,45 @@ body { padding-top: 0; }
   margin: 0;           /* removes the auto-centering margin, since text is left-aligned now */
 }
 
+/* Intro paragraph above the screenplays (plain text block, so the
+   underlined festival name stays inline instead of becoming a column) */
+.writing-intro {
+  max-width: 1000px;
+  margin: 50px auto 70px;
+  padding: 0 40px;
+  font-size: 30px;
+  line-height: 1.3;
+  text-align: center;
+  color: #FF4D80;
+}
+
+.screenplay-entry { margin-bottom: 80px; }
+
+/* Push It title card is landscape, so give it more width */
+.screenplay-poster-wide { width: 480px; display: block; }
+
+.screenplay-format {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FF4D80;
+}
+
+.screenplay-title {
+  margin: 0 0 16px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #FF3E41;
+}
+
+.screenplay-logline {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #F6E6F9;   /* light text so it's readable on black */
+}
+
 /* ==========================
    ABOUT SECTION (FIXED: not inside a media query)
 ========================== */
@@ -391,7 +428,7 @@ body { padding-top: 0; }
 }
 
 #work h1 {
-    font-family: Dela Gothic One;
+    font-family: 'Inter', sans-serif;
     font-size: 55px;
     color: #F6E6F9;
 }
@@ -415,7 +452,7 @@ body { padding-top: 0; }
     justify-content: center; /* Centers horizontally */
     width: 100%;
     padding-top: 50px;
-    font-family: 'Poppins', sans-serif; /* Ensure font-family is correctly set */
+    font-family: 'Inter', sans-serif; /* Ensure font-family is correctly set */
     margin-bottom: 10px;
 }
 
@@ -513,7 +550,7 @@ body { padding-top: 0; }
 
 #slx-creds {
     margin-top: 20px;
-    font-family: 'Montserrat';
+    font-family: 'Inter', sans-serif;
     color: #F6E6F9;  /* Text color */
     font-size: 16px;
 
@@ -563,7 +600,7 @@ body { padding-top: 0; }
 
 
 #work-intro {
-    font-family: 'Poppins';
+    font-family: 'Inter', sans-serif;
     font-size: 35px;
     color:#F6E6F9;
     padding-left: 200px;
@@ -645,7 +682,7 @@ body { padding-top: 0; }
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition for opacity */
-    font-family: Poppins;
+    font-family: 'Inter', sans-serif;
     text-align: center;
 }
 
@@ -678,7 +715,7 @@ body { padding-top: 0; }
     position: absolute;
     bottom: 10px;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Ensure the font is Poppins */
+    font-family: 'Inter', sans-serif;
     margin: 5px 0; /* Adjust margin to reduce space between paragraphs */
 }
 
@@ -766,3 +803,712 @@ footer .contact:hover { opacity: 0.7; }
   .title-right { font-size: 14px; gap: 8px; }
   .vertical-nav a { font-size: 14px; }
 }
+
+
+/* ==========================
+   SCREENPLAY CARDS (Writing section)
+   Two matching cards side by side: artwork on top, text below.
+========================== */
+.screenplay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px;
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  padding: 0 40px;
+}
+.screenplay-card {
+  display: flex;
+  flex-direction: column;
+  background: #0f0f0f;
+  border: 1px solid #2a0b10;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.screenplay-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #050505;
+  overflow: hidden;
+}
+.screenplay-media img,
+.screenplay-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.screenplay-card .screenplay-text {
+  padding: 28px 32px 34px;
+  font-size: inherit;
+  text-align: left;
+}
+.screenplay-card .screenplay-title { font-size: 34px; margin: 0 0 14px; }
+.screenplay-card .screenplay-logline { font-size: 18px; line-height: 1.6; margin: 0; }
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .screenplay-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Wide clips fill the card frame (crops the sides a little) */
+.screenplay-media .fill { object-fit: cover; }
+
+/* ==========================
+   SCREENPLAY TITLE-PAGE LOOK
+   Each card's text area reads like a script cover page:
+   paper, Courier, centered title, brads on the left edge.
+========================== */
+.fade-in {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  color: #F6E6F9;
+  font-size: 18px;
+  letter-spacing: 2px;
+  max-width: 1000px;
+  margin: 40px auto -30px;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.screenplay-card { background: #f4f0e6; border: none; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+.screenplay-card .screenplay-text {
+  position: relative;
+  padding: 34px 40px 40px 56px;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  color: #1a1a1a;
+  text-align: center;
+  flex: 1;
+}
+/* brass brads */
+.screenplay-card .screenplay-text::before,
+.screenplay-card .screenplay-text::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f3d98b, #b08a2e 60%, #6e5313);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.screenplay-card .screenplay-text::before { top: 22%; }
+.screenplay-card .screenplay-text::after { bottom: 22%; }
+
+.screenplay-card .screenplay-format {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #750D1B;
+  margin-bottom: 18px;
+}
+.screenplay-card .screenplay-title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin: 0 0 14px;
+}
+.screenplay-byline {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 26px;
+  color: #1a1a1a;
+}
+.screenplay-card .screenplay-logline {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  text-align: left;
+  border-top: 1px dashed #b9b2a2;
+  padding-top: 20px;
+}
+
+/* Festival laurel on a script title page */
+.screenplay-laurel {
+  display: block;
+  width: 150px;
+  max-width: 60%;
+  margin: -8px auto 22px;
+  mix-blend-mode: multiply;   /* lets the white background disappear into the paper */
+}
+
+/* Laurel overlaid on a card's clip (bottom-right corner) */
+.screenplay-media .media-laurel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.95)) drop-shadow(0 0 10px rgba(0,0,0,0.7));
+  z-index: 1;
+}
+
+/* Stand-in artwork until a clip or image is added */
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #2a0b10, #050505 70%);
+}
+.media-placeholder span {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: #FF4D80;
+}
+
+/* ==========================
+   PAGE ORDER UPDATE (Nov 2026)
+========================== */
+/* Title line now sits right under the name */
+.title-right { padding: 18px 0 0; }
+
+/* Slim logo strip under the intro */
+.logo-strip { padding: 10px 20px 50px; }
+.logo-strip .accolades-container { align-items: center; max-width: 1200px; margin: 0 auto; }
+.logo-strip .accolade-image,
+.logo-strip .accolade-image-white { width: 90px; height: 90px; margin: 10px 18px; }
+
+/* Selected Work: titles always visible under each thumbnail */
+.work-item { width: 250px; }
+.work-item .image-container { display: block; text-decoration: none; }
+.work-item .film-title {
+  position: static;
+  transform: none;
+  opacity: 1;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.3;
+  text-shadow: none;
+  color: #F6E6F9;
+}
+
+
+/* ==========================
+   TYPE CLEANUP (Nov 2026)
+   Three fonts only: Inter (everything), Bugaki (accent: title line +
+   typing word), Courier Prime (script cards).
+========================== */
+html, body { font-weight: 300; }
+
+/* Section headings: smaller, calmer, brighter red for contrast */
+.sectionals h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  margin: 18px auto;
+  color: #B3132B;
+}
+.slate-text { font-size: 64px; letter-spacing: 10px; padding: 18px 0 6px; }
+hr { height: 3px; width: 80%; }
+
+/* Body copy: readable weight */
+.intro-container, .writing-intro, .accolade-container { font-weight: 300; }
+.accolade-container { font-size: 24px; line-height: 1.4; }
+.writing-intro { font-size: 22px; }
+#intro-line { font-size: 22px; line-height: 1.4; }
+.highlight { font-family: 'Inter', sans-serif; font-weight: 600; font-style: italic; }
+.about-text { font-size: 17px; line-height: 1.6; font-weight: 300; }
+.about-text strong { font-weight: 600; }
+.vertical-nav a { font-weight: 400; font-size: 15px; letter-spacing: 2px; }
+.credits-list { font-weight: 300; color: #d9c9dc; font-size: 15px; padding: 10px 20px 40px; }
+
+/* Selected Work tabs */
+.work-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 16px 24px;
+}
+.work-tab {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #F6E6F9;
+  background: transparent;
+  border: 1px solid #5a1520;
+  border-radius: 999px;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.work-tab:hover { border-color: #FF3E41; }
+.work-tab.active { background: #B3132B; border-color: #B3132B; color: #fff; }
+
+/* ==========================
+   SHARED CONTENT WIDTH
+   Divider lines, Writing cards and the Selected Work box all line up
+   on the same column: 80% of the screen, max 1150px.
+========================== */
+hr { width: 80%; max-width: 1150px; }
+.screenplay-grid { width: 80%; max-width: 1150px; padding: 0; }
+.slate-wrapper { width: 80%; max-width: 1150px; margin: 60px auto; }
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 22px 18px;
+  padding: 0 24px;
+}
+.work-item { width: auto; margin: 0; }
+.film-image { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; }
+
+.slate-wrapper { padding-bottom: 0; overflow: hidden; }
+#work { padding-bottom: 30px; }
+
+/* Selected Work: more breathing room (4 per row, wider gaps) */
+.work-grid {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 40px 32px;
+  padding: 10px 44px 20px;
+}
+.work-tabs { padding: 20px 16px 36px; }
+.work-item .film-title { margin-top: 12px; font-size: 14px; color: #d9c9dc; }
+.film-image { border-radius: 6px; }
+#work { padding-bottom: 50px; }
+/* Center a short last row instead of leaving it hanging left */
+.work-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 32px; }
+.work-item { flex: 0 0 calc((100% - 96px) / 4); }
+
+
+/* ==========================================================
+   PRODUCTION SCRAPBOOK THEME (Nov 2026)
+   Black table, real-looking objects (polaroids, taped clippings,
+   script pages), one serif for display type.
+   Palette: black #0b0b0b, cream #F4F0E6, red #C8102E (one accent).
+========================================================== */
+:root {
+  --ink: #0b0b0b;
+  --cream: #F4F0E6;
+  --muted: #b9b2a6;
+  --red: #C8102E;
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+}
+html, body { background: var(--ink); color: var(--cream); }
+a { color: var(--red); }
+
+/* Nav: small serif caps spread across the top */
+.header-bar { padding: 22px 40px; }
+.vertical-nav { width: 100%; max-width: 1150px; justify-content: space-between; gap: 20px; }
+.vertical-nav a { font-family: var(--serif); font-size: 20px; letter-spacing: 1px; color: var(--cream); font-weight: 400; }
+.vertical-nav a:hover { color: var(--red); opacity: 1; }
+
+/* Name + title line */
+.name h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 150px;
+  letter-spacing: -1px;
+  line-height: 0.95;
+  color: var(--cream);
+  margin: 10px auto 0;
+}
+.title-right {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-transform: none;
+  color: var(--muted);
+}
+.title-right .star { color: var(--red); opacity: 1; }
+
+/* Intro */
+#intro-line, .intro-container { color: var(--cream); font-size: 22px; }
+.highlight { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.25em; color: var(--cream); }
+#dynamic-text { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 46px; color: var(--red); }
+.home-image { border-radius: 2px; border: 10px solid var(--cream); border-bottom-width: 44px; box-shadow: 0 14px 30px rgba(0,0,0,0.7); transform: rotate(-1.5deg); width: 34%; }
+
+/* Section headings */
+hr { display: none; }
+.sectionals { margin-top: 90px; }
+.sectionals h1, .slate-text {
+  font-family: var(--serif) !important;
+  font-weight: 400;
+  font-size: 96px;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: var(--cream) !important;
+  text-shadow: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.section-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--red);
+  margin: 10px 0 34px;
+}
+
+/* Body paragraphs */
+.writing-intro, .accolade-container { color: var(--muted); font-size: 20px; line-height: 1.55; }
+.writing-intro span, .accolade-container span { color: var(--cream) !important; }
+
+/* Selected Work: no box, just the table */
+.slate-wrapper { background: none; border: none; box-shadow: none; margin-top: 90px; }
+.clapper-stripes { display: none; }
+#work { background: none; }
+
+/* Tabs: underlined text instead of pills */
+.work-tab { border: none; border-radius: 0; padding: 6px 2px; margin: 0 12px; font-family: var(--serif); font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--muted); border-bottom: 1px solid transparent; }
+.work-tab:hover { color: var(--cream); border-color: transparent; }
+.work-tab.active { background: none; color: var(--cream); border-bottom: 1px solid var(--red); }
+
+/* Polaroid thumbnails */
+.work-grid { gap: 46px 34px; padding: 10px 20px 20px; }
+.work-item .image-container {
+  background: var(--cream);
+  padding: 10px 10px 0;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.65);
+  transition: transform 0.25s ease;
+}
+.work-item:nth-child(3n+1) .image-container { transform: rotate(-1.2deg); }
+.work-item:nth-child(3n+2) .image-container { transform: rotate(0.9deg); }
+.work-item:nth-child(3n) .image-container { transform: rotate(-0.4deg); }
+.work-item .image-container:hover { transform: rotate(0deg) scale(1.03); }
+.film-image { border-radius: 0; }
+.film-image:hover { transform: none; }
+.work-item .film-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 10px 4px 12px;
+  text-align: center;
+}
+
+/* Logos and clippings sit on the same table */
+.logo-strip { padding-top: 20px; }
+.SLX img { border-color: var(--cream); }
+
+/* Script cards already match; align their accent */
+.screenplay-card .screenplay-format { color: var(--red); }
+
+/* About: headshot as a taped polaroid */
+.about-image { position: relative; }
+.about-image img {
+  border-radius: 2px;
+  border: 12px solid var(--cream);
+  border-bottom-width: 48px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.7);
+  transform: rotate(1.5deg);
+}
+.about-text { color: var(--muted); }
+.about-text strong, .about-text em { color: var(--cream); }
+.about-text span { color: var(--cream) !important; text-decoration-color: var(--red) !important; }
+.credits-list { color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 20px; }
+footer .contact { color: var(--cream); font-family: var(--serif); font-size: 22px; }
+
+/* Scrapbook fixes */
+.work-grid { gap: 46px 34px; }
+.work-item { flex: 0 0 calc((100% - 3 * 34px) / 4); }
+/* Film strip in real-film colors: dark film, cream sprocket holes */
+.gallery::before, .gallery::after {
+  background-color: #1c1a17;
+  background-image: repeating-linear-gradient(to right, transparent 0 8px, var(--cream) 8px 18px, transparent 18px 26px);
+  background-size: 26px 10px;
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.gallery { background: #1c1a17; }
+.gallery-item { border-radius: 4px; }
+.media-placeholder { background: radial-gradient(circle at 50% 40%, #2a1214, #050505 70%); }
+.media-placeholder span { color: var(--cream); font-family: var(--serif); font-weight: 400; font-size: 34px; letter-spacing: 1px; }
+
+
+/* ==========================
+   MOVING FILM STRIP
+   The whole strip (frames + sprocket holes) glides left like a moving
+   walkway. Paused until you hover on desktop; always gliding on phones.
+========================== */
+.gallery {
+  display: block;
+  max-width: none;
+  width: 100%;
+  margin: 50px 0;
+  padding: 0;
+  overflow: hidden;
+  background: #1c1a17;
+}
+.gallery::before, .gallery::after { content: none; }
+.gallery-track {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding: 30px 0;
+  animation: film-walkway 40s linear infinite;
+  animation-play-state: paused;
+}
+.gallery:hover .gallery-track { animation-play-state: running; }
+.gallery-track::before, .gallery-track::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 10px;
+  background-image: repeating-linear-gradient(to right, transparent 0 8px, var(--cream) 8px 18px, transparent 18px 26px);
+  background-size: 26px 10px;
+  background-repeat: repeat-x;
+}
+.gallery-track::before { top: 10px; }
+.gallery-track::after { bottom: 10px; }
+.gallery-track .gallery-item {
+  flex: 0 0 auto;
+  width: var(--frame-w, calc((100vw - 3 * 24px) / 3));
+  aspect-ratio: 4 / 3;
+  border-radius: 3px;
+}
+@keyframes film-walkway {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50% - 12px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track { animation: none; }
+}
+
+
+/* ==========================
+   WORK THUMBNAILS AS 35MM FILM FRAMES
+   Dark film stock with sprocket holes above and below each frame,
+   edge-print frame number, caption in serif on the table below.
+========================== */
+.work-item .image-container {
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  transform: none !important;
+  position: relative;
+}
+.work-item .film-image {
+  box-sizing: border-box;
+  padding: 18px 8px;
+  background-color: #1c1a17;
+  background-image:
+    repeating-linear-gradient(to right, transparent 0 6px, var(--cream) 6px 14px, transparent 14px 20px),
+    repeating-linear-gradient(to right, transparent 0 6px, var(--cream) 6px 14px, transparent 14px 20px);
+  background-size: 20px 7px, 20px 7px;
+  background-position: 0 5px, 0 calc(100% - 5px);
+  background-repeat: repeat-x;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.work-item .image-container:hover .film-image { transform: translateY(-4px); box-shadow: 0 16px 28px rgba(0,0,0,0.75); }
+.work-item .film-title {
+  color: var(--cream);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  padding: 12px 4px 0;
+  background: none;
+}
+
+/* Film strip always gliding; polaroid of Rhea a bit bigger */
+.gallery-track { animation-play-state: running; }
+.home-image { width: 44%; }
+
+
+/* ==========================
+   SCRIPT CARDS: more compact
+========================== */
+.screenplay-grid { max-width: 880px; gap: 32px; }
+.screenplay-card .screenplay-text { padding: 24px 28px 28px 46px; }
+.screenplay-card .screenplay-text::before, .screenplay-card .screenplay-text::after { left: 16px; width: 9px; height: 9px; }
+.screenplay-card .screenplay-format { font-size: 11px; margin-bottom: 12px; }
+.screenplay-card .screenplay-title { font-size: 22px; margin-bottom: 10px; }
+.screenplay-byline { font-size: 13px; margin-bottom: 18px; }
+.screenplay-card .screenplay-logline { font-size: 13px; line-height: 1.55; padding-top: 14px; }
+
+/* ==========================
+   SELECTED WORK: CAMERA VIEWFINDER FRAMES
+   Clean image, thin cream corner brackets, red REC on hover.
+   Three per row so each frame is bigger.
+========================== */
+.work-grid { gap: 48px 36px; }
+.work-item { flex: 0 0 calc((100% - 2 * 36px) / 3); }
+.work-item .film-image {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+}
+.work-item .image-container:hover .film-image { transform: none; box-shadow: none; }
+.viewfinder { position: relative; display: block; }
+.viewfinder::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  pointer-events: none;
+  --c: rgba(244, 240, 230, 0.9);
+  --l: 22px;
+  --t: 2px;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--l) var(--t) no-repeat,
+    linear-gradient(var(--c), var(--c)) top left / var(--t) var(--l) no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / var(--l) var(--t) no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / var(--t) var(--l) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / var(--l) var(--t) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / var(--t) var(--l) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / var(--l) var(--t) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / var(--t) var(--l) no-repeat;
+  transition: inset 0.25s ease;
+}
+.viewfinder .rec {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--cream);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+.viewfinder .rec::before {
+  content: "";
+  display: inline-block;
+  width: 8px; height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  vertical-align: 0;
+  animation: rec-blink 1s steps(2, start) infinite;
+}
+@keyframes rec-blink { to { visibility: hidden; } }
+.image-container:hover .viewfinder::after { inset: 6px; }
+.image-container:hover .viewfinder .rec { opacity: 1; }
+.work-item .film-title { padding-top: 12px; }
+
+/* Script card art in widescreen 2.39:1 so cards are shorter */
+.screenplay-media { aspect-ratio: 2.39 / 1; }
+.work-item .image-container:hover { opacity: 1; }
+
+/* Thumbnail captions in clean sans */
+.work-item .film-title { font-family: 'Inter', sans-serif; font-style: normal; font-weight: 400; font-size: 14px; letter-spacing: 0.3px; }
+
+/* Top collage: camera polaroid with the Tribeca red carpet photo taped below it */
+.polaroid-pair { display: flex; flex-direction: column; width: 78%; max-width: 900px; margin: 0 auto; }
+.polaroid-pair .home-image { box-sizing: border-box; height: auto; display: block; width: 60%; align-self: flex-start; margin-left: 6%; position: relative; z-index: 1; }
+.scrap-photo { position: relative; z-index: 2; align-self: flex-end; width: 56%; margin: -7% 4% 0 0; transform: rotate(2.2deg); }
+.scrap-photo img { display: block; width: 100%; height: auto; box-sizing: border-box; border: 8px solid #fff; box-shadow: 0 16px 34px rgba(0,0,0,0.75); }
+.scrap-photo .tape { position: absolute; top: -14px; left: 50%; width: 120px; height: 30px; transform: translateX(-50%) rotate(-3deg); background: rgba(244,240,230,0.55); box-shadow: 0 1px 3px rgba(0,0,0,0.25); z-index: 3; }
+
+/* Top collage, desktop: bigger photos, intro tucked to the right of the camera polaroid, red carpet photo below it */
+@media (min-width: 769px) {
+  #home { display: grid; grid-template-columns: repeat(12, 1fr); width: 92%; max-width: 1280px; margin: 0 auto; gap: 0; min-height: 0; text-align: left; }
+  .polaroid-pair { display: contents; }
+  .polaroid-pair .home-image { grid-column: 1 / 8; grid-row: 1; width: 100%; margin: 0; align-self: start; }
+  .intro-container { grid-column: 8 / 13; grid-row: 1; width: auto; align-self: center; padding: 0 0 0 44px; text-align: left; }
+  .scrap-photo { grid-column: 5 / 13; grid-row: 2; width: auto; margin: -70px 0 0 0; }
+  #intro-line, #typing-text { text-align: left; justify-content: flex-start; }
+  #typing-text { width: 100%; margin-left: 0; align-self: flex-start; }
+}
+
+/* Top collage v2: camera polaroid + intro on top, a tidy row of three set photos below */
+.set-photo { margin: 0; position: relative; }
+.set-photo img { display: block; width: 100%; height: auto; box-sizing: border-box; border: 8px solid var(--cream); border-bottom-width: 30px; border-radius: 2px; box-shadow: 0 14px 30px rgba(0,0,0,0.7); }
+@media (min-width: 769px) {
+  #home { row-gap: 0; }
+  .set-photo-1 { grid-column: 1 / 6; grid-row: 2; margin-top: -24px; transform: rotate(-2deg); z-index: 2; }
+  .scrap-photo { grid-column: 5 / 10; grid-row: 2; margin: 10px 0 0 0; transform: rotate(1.5deg); z-index: 3; align-self: start; }
+  .set-photo-2 { grid-column: 9 / 13; grid-row: 2; margin-top: -10px; margin-right: -2%; transform: rotate(-1deg); z-index: 2; align-self: start; }
+  .polaroid-pair .home-image { grid-column: 1 / 8; }
+  .intro-container { grid-column: 8 / 13; }
+}
+@media (min-width: 769px) {
+  /* even out the bottom row: three equal-size photos */
+  .set-photo-1, .scrap-photo, .set-photo-2 { grid-column: 1 / 13; grid-row: 2; width: 37%; margin-right: 0; }
+  .set-photo-1 { justify-self: start; }
+  .scrap-photo { justify-self: center; }
+  .set-photo-2 { justify-self: end; }
+}
+
+/* ==========================
+   SPACING SYSTEM (one rhythm for the whole page)
+   --content: shared column width; --gap-section: space between sections;
+   --gap-head: heading to content; --gap-block: between blocks inside a section
+   ========================== */
+:root { --content: 1120px; --gap-section: 140px; --gap-head: 48px; --gap-block: 40px; --text-col: 720px; }
+
+.gallery { margin: 36px 0; }
+#home { margin-top: 0; margin-bottom: 0; }
+.logo-strip { padding: 80px 0 0; margin: 0; }
+.logo-strip .accolades-container { max-width: var(--content); width: 92%; margin: 0 auto; justify-content: space-between; }
+
+.sectionals { margin: var(--gap-section) 0 0; padding: 0; }
+.sectionals h1 { margin: 0; line-height: 1; }
+.sectionals .section-sub { margin: 14px 0 0; }
+
+.writing-intro, .accolade-container {
+  max-width: var(--text-col); width: 92%; margin: 32px auto var(--gap-head); padding: 0;
+  text-align: center; line-height: 1.6;
+}
+.screenplay-grid { margin-top: 0; margin-bottom: 0; }
+
+.slate-wrapper { width: 92%; max-width: var(--content); margin: 0 auto; padding: 0; }
+.work-tabs { padding: 32px 0 var(--gap-block); margin: 0; }
+.work-grid { margin: 0; }
+
+.clippings-strip { width: 92%; max-width: var(--content); margin: 0 auto; }
+.credits-list { margin: var(--gap-block) auto 0; padding: 0; }
+
+#about { margin: 0; }
+.about-container { width: 92%; max-width: var(--content); margin: var(--gap-head) auto 0; padding: 0; gap: 64px; justify-content: space-between; }
+.about-text p { margin: 0 0 16px; line-height: 1.65; }
+footer { margin-top: var(--gap-section); padding: 40px 0 56px; border-top: 1px solid rgba(244,240,230,0.12); }
+@media (min-width: 769px) {
+  .about-container { flex-wrap: nowrap; align-items: flex-start; }
+  .about-image { flex: 0 0 400px; }
+  .about-image img { width: 100%; height: auto; box-sizing: border-box; }
+  .about-container > .about-text { flex: 1 1 auto; max-width: 640px; }
+  .about-text .about-text { flex: none; width: 100%; max-width: none; }
+}
+/* Film strip: duration scales with the number of frames so the speed stays the same */
+.gallery-track { animation-duration: var(--strip-time, 40s); }
+.gallery-item img { object-fit: cover; }
+/* About: compact bio */
+@media (min-width: 769px) {
+  .about-container { align-items: center; max-width: 980px; }
+  .about-image { flex: 0 0 300px; }
+}
+.about-text { font-size: 16px; }
+.about-text p { margin: 0 0 14px; }
+.about-text .about-lede { font-family: var(--serif); font-size: 26px; line-height: 1.3; color: var(--cream); margin-bottom: 20px; }
+.about-text .about-lede span { font-style: italic; }
+.about-text .about-open { font-size: 19px; line-height: 1.55; color: var(--cream); margin-bottom: 18px; }
+@media (min-width: 769px) {
+  .about-container { max-width: 1060px; align-items: flex-start; gap: 72px; }
+  .about-image { flex: 0 0 300px; margin-top: 6px; }
+  .about-container > .about-text { max-width: 680px; flex: 1 1 680px; }
+}
+.about-text { padding-right: 0; } .about-text .about-text { padding: 0; }
+/* Highlights: bold red instead of red underline */
+.hl, .about-text span.hl { color: var(--red) !important; font-weight: 600; text-decoration: none !important; }
+/* Bio opening paragraph in the display serif */
+.about-text .about-open { font-family: var(--serif); font-size: 27px; line-height: 1.3; color: var(--cream); font-weight: 400; margin-bottom: 22px; }
+.about-text .about-open .hl { font-weight: 400; font-style: italic; }
+@media (max-width: 768px) { .about-text .about-open { font-size: 23px; } }
